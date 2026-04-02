@@ -1,24 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   template: `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow-sm">
-      <div class="container-fluid">
-        <span class="navbar-brand text-dark">
-          <i class="bi bi-hammer me-2"></i>Reformas Miguel
-        </span>
-        <div class="navbar-nav ms-3">
-          <a class="nav-link text-dark" routerLink="/clientes" routerLinkActive="fw-bold">
-            <i class="bi bi-people me-1"></i>Clientes
-          </a>
-        </div>
-      </div>
-    </nav>
-    <router-outlet></router-outlet>
+    <app-navbar></app-navbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+    <a href="https://wa.me/34600123456?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
+       class="whatsapp-float" target="_blank" rel="noopener" title="Contactar por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
   `
 })
 export class AppComponent {}

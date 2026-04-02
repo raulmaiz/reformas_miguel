@@ -1,0 +1,123 @@
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
+        <li class="breadcrumb-item active text-secondary">Zonas de trabajo</li>
+      </ol>
+    </nav>
+    <div class="col-lg-7">
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-geo-alt me-1"></i> Barcelona y alrededores</span>
+      <h1 class="display-5 fw-black text-white mb-3" style="font-family:'Poppins',sans-serif;">
+        Reformas en Barcelona<br>
+        <span class="text-warning">y toda el área metropolitana</span>
+      </h1>
+      <p class="lead text-secondary">
+        Trabajamos en toda Barcelona ciudad, municipios del área metropolitana y poblaciones cercanas.
+        Si no ves tu zona, consúltanos: casi seguro que llegamos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ZONAS -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Dónde trabajamos</span>
+      <div class="divider-amber mx-auto"></div>
+      <h2 class="section-title">Cobertura en Barcelona y alrededores</h2>
+    </div>
+
+    <div class="row g-3">
+      @for (zona of zonas; track zona.nombre) {
+        <div class="col-sm-6 col-lg-3">
+          <div class="zone-item">
+            <i class="bi {{ zona.icono }} text-warning fs-5 flex-shrink-0"></i>
+            <div>
+              <div class="fw-bold" style="font-size:0.95rem;">{{ zona.nombre }}</div>
+              <div class="text-muted" style="font-size:0.78rem;">{{ zona.detalle }}</div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="mt-5 p-4 bg-warning bg-opacity-10 rounded-4 border border-warning border-opacity-25">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8">
+          <h5 class="fw-bold mb-1">
+            <i class="bi bi-question-circle me-2 text-warning"></i>
+            ¿Tu zona no está en la lista?
+          </h5>
+          <p class="text-muted mb-0">
+            Trabajamos en muchas más zonas fuera de Barcelona. Consúltanos sin compromiso —
+            si podemos llegar, vamos.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a routerLink="/contacto" class="btn btn-warning fw-bold px-4">
+            <i class="bi bi-chat-dots me-2"></i>Consultar mi zona
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEO LOCAL: barrios específicos -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Reformas por barrios</span>
+      <div class="divider-amber mx-auto"></div>
+      <h2 class="section-title">Reformas en los principales barrios de Barcelona</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+          <h5 class="fw-bold mb-2">Reformas en el Eixample</h5>
+          <p class="text-muted small">
+            El Eixample concentra una gran cantidad de pisos antiguos con potencial de reforma.
+            Conocemos bien los edificios de la zona: sus particularidades estructurales, los
+            materiales más comunes y cómo trabajar sin molestar a la comunidad.
+          </p>
+          <a routerLink="/contacto" class="btn btn-sm btn-outline-dark mt-2">Pedir presupuesto</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+          <h5 class="fw-bold mb-2">Reformas en Gràcia</h5>
+          <p class="text-muted small">
+            Gràcia tiene una arquitectura característica con pisos pequeños de gran encanto.
+            Miguel conoce cómo sacar el máximo partido a espacios reducidos sin perder carácter.
+          </p>
+          <a routerLink="/contacto" class="btn btn-sm btn-outline-dark mt-2">Pedir presupuesto</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+          <h5 class="fw-bold mb-2">Reformas en Hospitalet</h5>
+          <p class="text-muted small">
+            Hospitalet es una de las zonas con más actividad reformista del área metropolitana.
+            Gran parte de los pisos son de los años 60–80 y necesitan una renovación completa.
+          </p>
+          <a routerLink="/contacto" class="btn btn-sm btn-outline-dark mt-2">Pedir presupuesto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title section-title-white mb-3">¿Reformamos en tu zona?</h2>
+    <p class="text-secondary mb-4">Dinos dónde estás y te confirmamos cobertura en minutos.</p>
+    <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
+      <i class="bi bi-chat-dots me-2"></i>Consultar disponibilidad
+    </a>
+  </div>
+</section>

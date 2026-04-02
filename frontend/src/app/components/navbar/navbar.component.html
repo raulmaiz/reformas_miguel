@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container">
+
+    <a class="navbar-brand d-flex flex-column" routerLink="/">
+      <span class="fw-bold fs-5">
+        <i class="bi bi-hammer me-2 text-warning"></i>Reformas Miguel
+      </span>
+      <span class="slogan text-warning-emphasis" style="font-size:0.6rem;opacity:0.7;letter-spacing:0.04em;font-style:italic;">
+        Donde pasa Miguel, no hay que volver a pasar
+      </span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarMain"
+            aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav me-auto mt-3 mt-lg-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-tools me-1"></i>Servicios
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <a class="dropdown-item" routerLink="/reformas-integrales-barcelona">
+                <i class="bi bi-house-gear me-2 text-warning"></i>Reformas integrales
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/reformas-bano-barcelona">
+                <i class="bi bi-droplet me-2 text-warning"></i>Reformas de baño
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/reformas-cocina-barcelona">
+                <i class="bi bi-egg-fried me-2 text-warning"></i>Reformas de cocina
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/pintura-y-acabados">
+                <i class="bi bi-brush me-2 text-warning"></i>Pintura y acabados
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/electricidad-y-fontaneria">
+                <i class="bi bi-lightning me-2 text-warning"></i>Electricidad y fontanería
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/proyectos-realizados" routerLinkActive="active">
+            <i class="bi bi-images me-1"></i>Proyectos
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zonas-de-trabajo" routerLinkActive="active">
+            <i class="bi bi-geo-alt me-1"></i>Zonas
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/quienes-somos" routerLinkActive="active">
+            <i class="bi bi-person-circle me-1"></i>Quiénes somos
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/preguntas-frecuentes" routerLinkActive="active">
+            <i class="bi bi-question-circle me-1"></i>FAQ
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="d-flex gap-2 mt-3 mt-lg-0">
+        <a href="tel:+34600123456" class="btn btn-outline-warning btn-sm d-lg-none">
+          <i class="bi bi-telephone me-1"></i>Llamar
+        </a>
+        <a routerLink="/contacto" class="btn btn-warning fw-bold px-4">
+          <i class="bi bi-chat-dots me-1"></i>Pedir presupuesto
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>

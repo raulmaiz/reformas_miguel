@@ -1,0 +1,171 @@
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
+        <li class="breadcrumb-item active text-secondary">Contacto</li>
+      </ol>
+    </nav>
+    <div class="col-lg-7">
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-chat-dots me-1"></i> Respuesta en 24h</span>
+      <h1 class="display-5 fw-black text-white mb-3" style="font-family:'Poppins',sans-serif;">
+        Pide tu presupuesto<br>
+        <span class="text-warning">gratuito sin compromiso</span>
+      </h1>
+      <p class="lead text-secondary">
+        Cuéntanos qué quieres reformar. Te llamamos, quedamos y te damos un precio por escrito.
+        Sin coste, sin trampa, sin letra pequeña.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- FORMULARIO -->
+      <div class="col-lg-7">
+        <div class="bg-white rounded-4 p-4 p-lg-5 shadow-sm border">
+          <h4 class="fw-bold mb-1">
+            <i class="bi bi-pencil-square me-2 text-warning"></i>Cuéntanos tu proyecto
+          </h4>
+          <p class="text-muted small mb-4">Respondemos en menos de 24 horas</p>
+
+          <form>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">Nombre *</label>
+                <input type="text" class="form-control" placeholder="¿Cómo te llamas?">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">Apellidos</label>
+                <input type="text" class="form-control" placeholder="Apellidos (opcional)">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">Teléfono *</label>
+                <input type="tel" class="form-control" placeholder="+34 600 123 456">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">Email</label>
+                <input type="email" class="form-control" placeholder="tu&#64;email.com (opcional)">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold small">Zona *</label>
+                <input type="text" class="form-control" placeholder="¿En qué barrio o ciudad?">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold small">¿Qué quieres reformar? *</label>
+                <select class="form-select">
+                  <option value="" disabled selected>Selecciona el tipo de reforma</option>
+                  <option>Reforma integral del piso</option>
+                  <option>Reforma de baño</option>
+                  <option>Reforma de cocina</option>
+                  <option>Pintura y acabados</option>
+                  <option>Electricidad o fontanería</option>
+                  <option>Varios trabajos</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold small">Cuéntanos más (opcional)</label>
+                <textarea class="form-control" rows="3"
+                          placeholder="Estado actual, superficie aproximada, materiales en mente..."></textarea>
+              </div>
+              <div class="col-12">
+                <a href="https://wa.me/34600123456?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20para%20una%20reforma"
+                   class="btn btn-warning btn-lg w-100 fw-bold" target="_blank" rel="noopener">
+                  <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+                </a>
+                <p class="text-muted text-center small mt-2 mb-0">
+                  Al pulsar abrirás WhatsApp con tu mensaje. Puedes añadir detalles adicionales.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- INFO CONTACTO -->
+      <div class="col-lg-5">
+        <h4 class="fw-bold mb-4">Otras formas de contactar</h4>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+          <div>
+            <div class="fw-bold">Teléfono</div>
+            <a href="tel:+34600123456" class="text-dark text-decoration-none fs-5 fw-semibold">+34 600 123 456</a>
+            <div class="text-muted small">Lun–Vie 8:00–19:00 · Sáb 9:00–14:00</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" style="background:#dcfce7;color:#16a34a;">
+            <i class="bi bi-whatsapp"></i>
+          </div>
+          <div>
+            <div class="fw-bold">WhatsApp</div>
+            <a href="https://wa.me/34600123456" class="text-decoration-none fw-semibold" style="color:#16a34a;"
+               target="_blank" rel="noopener">
+              Escribir ahora
+            </a>
+            <div class="text-muted small">Respuesta en menos de 2 horas</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+          <div>
+            <div class="fw-bold">Email</div>
+            <a href="mailto:info@reformasmiguel.es" class="text-dark text-decoration-none">
+              info&#64;reformasmiguel.es
+            </a>
+            <div class="text-muted small">Para presupuestos y consultas</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+          <div>
+            <div class="fw-bold">Zona de trabajo</div>
+            <div>Barcelona y área metropolitana</div>
+            <a routerLink="/zonas-de-trabajo" class="text-warning text-decoration-none small fw-semibold">
+              Ver todas las zonas →
+            </a>
+          </div>
+        </div>
+
+        <!-- Datos de confianza -->
+        <div class="mt-4 p-4 bg-warning bg-opacity-10 rounded-3 border border-warning border-opacity-25">
+          <h6 class="fw-bold mb-3">
+            <i class="bi bi-shield-check me-2 text-warning"></i>Por qué contactarnos
+          </h6>
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex align-items-center gap-2 small">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              Visita y presupuesto gratuito
+            </div>
+            <div class="d-flex align-items-center gap-2 small">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              Precio cerrado por escrito
+            </div>
+            <div class="d-flex align-items-center gap-2 small">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              Plazos garantizados
+            </div>
+            <div class="d-flex align-items-center gap-2 small">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              +15 años de experiencia
+            </div>
+            <div class="d-flex align-items-center gap-2 small">
+              <i class="bi bi-check-circle-fill text-success"></i>
+              Equipo propio, sin subcontratas
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

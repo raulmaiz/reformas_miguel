@@ -1,0 +1,81 @@
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
+        <li class="breadcrumb-item active text-secondary">Proyectos realizados</li>
+      </ol>
+    </nav>
+    <div class="col-lg-7">
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-images me-1"></i> Trabajos reales</span>
+      <h1 class="display-5 fw-black text-white mb-3" style="font-family:'Poppins',sans-serif;">
+        Proyectos realizados en Barcelona
+      </h1>
+      <p class="lead text-secondary">
+        Cada proyecto es diferente. Lo que no cambia es el resultado: bien hecho y entregado en plazo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS GRID -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      @for (p of proyectos; track p.zona) {
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card bg-white border">
+            <!-- Imagen placeholder antes/después -->
+            <div class="row g-0">
+              <div class="col-6">
+                <div class="before-img" style="height:160px;font-size:2rem;">
+                  <i class="bi bi-x-circle-fill"></i>
+                  <span class="before-label" style="font-size:0.65rem;">Antes</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="after-img" style="height:160px;font-size:2rem;">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span class="after-label" style="font-size:0.65rem;">Después</span>
+                </div>
+              </div>
+            </div>
+            <!-- Info -->
+            <div class="p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge bg-warning text-dark">{{ p.tipo }}</span>
+                <span class="badge bg-light text-dark border">
+                  <i class="bi bi-geo-alt me-1"></i>{{ p.zona }}
+                </span>
+              </div>
+              <p class="text-muted small mb-3">{{ p.descripcion }}</p>
+              <div class="d-flex gap-3 small text-muted border-top pt-3">
+                <span><i class="bi bi-calendar3 me-1 text-warning"></i>{{ p.dias }} días</span>
+                <span><i class="bi bi-rulers me-1 text-warning"></i>{{ p.m2 }} m²</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title section-title-white mb-3">¿Quieres que tu piso sea el próximo?</h2>
+    <p class="text-secondary mb-4">Visita gratuita. Presupuesto cerrado en 24h.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
+        <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+      </a>
+      <a href="https://wa.me/34600123456" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp me-2"></i>WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
