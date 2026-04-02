@@ -6,10 +6,13 @@ services:
     dockerContext: ./backend
     plan: free
     region: frankfurt
+    healthCheckPath: /api/clientes
     envVars:
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://aws-0-eu-west-3.pooler.supabase.com:6543/postgres?sslmode=require
+        value: jdbc:postgresql://aws-0-eu-west-3.pooler.supabase.com:5432/postgres?sslmode=require
       - key: SPRING_DATASOURCE_USERNAME
         value: postgres.xjjkfbiqsysydlguobxd
       - key: SPRING_DATASOURCE_PASSWORD
         value: O0dUNQNJha99dMLa
+      - key: JAVA_OPTS
+        value: -Xmx400m -Xms200m -Djava.net.preferIPv4Stack=true
