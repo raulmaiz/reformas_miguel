@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: reformas-miguel-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://aws-0-eu-west-3.pooler.supabase.com:6543/postgres?sslmode=require
+      - key: SPRING_DATASOURCE_USERNAME
+        value: postgres.xjjkfbiqsysydlguobxd
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: O0dUNQNJha99dMLa
