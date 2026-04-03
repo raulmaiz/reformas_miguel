@@ -455,6 +455,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ---- Footer: texto claro sobre fondo oscuro ---- */
+footer .text-secondary,
+footer .text-secondary a,
+footer ul.text-secondary,
+footer ul.text-secondary li {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+footer a.text-secondary {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+footer a.text-secondary:hover {
+  color: #fff !important;
+}
+
+/* CTA dark sections */
+.cta-section .text-secondary {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
 /* ---- Old clientes styles (kept for v2.0) ---- */
 .modal-backdrop.show { opacity: 0.5; }
 .table th {
