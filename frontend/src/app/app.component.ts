@@ -13,7 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
       <router-outlet></router-outlet>
     </main>
     <app-footer></app-footer>
-    <a href="https://wa.me/34600123456?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
+    <a href="https://wa.me/34646450767?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
        class="whatsapp-float" target="_blank" rel="noopener" title="Contactar por WhatsApp">
       <i class="bi bi-whatsapp"></i>
     </a>
