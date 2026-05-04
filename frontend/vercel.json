@@ -4,10 +4,6 @@
   "installCommand": "npm install --legacy-peer-deps",
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "https://reformas-miguel-backend.onrender.com/api/$1"
-    },
-    {
       "handle": "filesystem"
     },
     {
