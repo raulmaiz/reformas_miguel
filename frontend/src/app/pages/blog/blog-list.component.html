@@ -1,0 +1,61 @@
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+        <li class="breadcrumb-item active text-white">{{ 'blog.breadcrumb' | translate }}</li>
+      </ol>
+    </nav>
+    <div class="col-lg-8">
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-journal-text me-1"></i> {{ 'blog.hero_badge' | translate }}</span>
+      <h1 class="display-5 fw-black text-white mb-3">
+        {{ 'blog.hero_title' | translate }}
+      </h1>
+      <p class="lead text-white">
+        {{ 'blog.hero_subtitle' | translate }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      @for (post of posts; track post.slug) {
+        <div class="col-md-6 col-lg-4">
+          <a [routerLink]="['/blog', post.slug]" class="text-decoration-none text-dark d-block h-100">
+            <article class="h-100 p-4 bg-white rounded-3 border shadow-sm d-flex flex-column blog-card">
+              <div class="d-flex align-items-center justify-content-between mb-3 small text-muted">
+                <span class="badge bg-warning text-dark">{{ categoryLabels[post.category][lang()] }}</span>
+                <span><i class="bi bi-clock me-1"></i>{{ post.readingMinutes }} min</span>
+              </div>
+              <h2 class="h5 fw-bold mb-2">{{ post.title[lang()] }}</h2>
+              <p class="text-muted small flex-grow-1">{{ post.summary[lang()] }}</p>
+              <div class="d-flex align-items-center justify-content-between border-top pt-3 mt-3 small">
+                <time class="text-muted" [attr.datetime]="post.date">{{ formatDate(post.date) }}</time>
+                <span class="text-warning fw-semibold">
+                  {{ 'blog.read_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
+                </span>
+              </div>
+            </article>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cta-section py-5">
+  <div class="container text-center">
+    <h2 class="section-title section-title-white mb-3">{{ 'blog.cta_title' | translate }}</h2>
+    <p class="text-secondary mb-4">{{ 'blog.cta_intro' | translate }}</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a routerLink="/calcular-presupuesto" class="btn btn-warning btn-lg fw-bold px-5">
+        <i class="bi bi-calculator me-2"></i>{{ 'blog.cta_calc' | translate }}
+      </a>
+      <a routerLink="/contacto" class="btn btn-outline-light btn-lg px-4">
+        <i class="bi bi-chat-dots me-2"></i>{{ 'blog.cta_contact' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

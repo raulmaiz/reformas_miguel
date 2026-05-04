@@ -1,0 +1,74 @@
+@if (post) {
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+          <li class="breadcrumb-item"><a routerLink="/blog" class="text-warning text-decoration-none">{{ 'blog.breadcrumb' | translate }}</a></li>
+          <li class="breadcrumb-item active text-white">{{ categoryLabels[post.category][lang()] }}</li>
+        </ol>
+      </nav>
+      <div class="col-lg-9">
+        <div class="d-flex align-items-center gap-3 mb-3 small text-warning">
+          <span class="badge bg-warning text-dark">{{ categoryLabels[post.category][lang()] }}</span>
+          <time [attr.datetime]="post.date">{{ formatDate(post.date) }}</time>
+          <span><i class="bi bi-clock me-1"></i>{{ post.readingMinutes }} min</span>
+        </div>
+        <h1 class="display-5 fw-black text-white mb-3">
+          {{ post.title[lang()] }}
+        </h1>
+        <p class="lead text-white">
+          {{ post.summary[lang()] }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <article class="blog-article" [innerHTML]="post.body[lang()]"></article>
+
+          <div class="mt-5 p-4 p-lg-5 bg-warning bg-opacity-10 border border-warning border-opacity-25 rounded-4 text-center">
+            <h3 class="h5 fw-bold mb-2">{{ 'blog.post_cta_title' | translate }}</h3>
+            <p class="text-muted mb-4">{{ 'blog.post_cta_intro' | translate }}</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a routerLink="/calcular-presupuesto" class="btn btn-warning fw-bold px-4">
+                <i class="bi bi-calculator me-2"></i>{{ 'blog.post_cta_calc' | translate }}
+              </a>
+              <a routerLink="/contacto" class="btn btn-outline-dark px-4">
+                <i class="bi bi-chat-dots me-2"></i>{{ 'blog.post_cta_contact' | translate }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @if (related.length > 0) {
+    <section class="py-5 bg-light border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 class="h4 fw-bold mb-4">{{ 'blog.related_title' | translate }}</h2>
+            <div class="row g-3">
+              @for (r of related; track r.slug) {
+                <div class="col-md-6">
+                  <a [routerLink]="['/blog', r.slug]" class="text-decoration-none text-dark">
+                    <div class="p-4 bg-white rounded-3 border h-100 blog-card">
+                      <span class="badge bg-warning text-dark mb-2">{{ categoryLabels[r.category][lang()] }}</span>
+                      <h3 class="h6 fw-bold mb-2">{{ r.title[lang()] }}</h3>
+                      <p class="text-muted small mb-0">{{ r.summary[lang()] }}</p>
+                    </div>
+                  </a>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  }
+}

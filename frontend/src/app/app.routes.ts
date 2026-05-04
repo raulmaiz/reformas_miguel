@@ -50,6 +50,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/calcular-presupuesto/calcular-presupuesto.component').then(m => m.CalcularPresupuestoComponent)
   },
   {
+    path: 'blog',
+    loadComponent: () => import('./pages/blog/blog-list.component').then(m => m.BlogListComponent)
+  },
+  {
+    path: 'blog/:slug',
+    loadComponent: () => import('./pages/blog/blog-post.component').then(m => m.BlogPostComponent)
+  },
+  {
     path: 'aviso-legal',
     loadComponent: () => import('./pages/legal/aviso-legal.component').then(m => m.AvisoLegalComponent)
   },

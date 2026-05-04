@@ -61,6 +61,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://reformasmiguel.cat/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reformasmiguel.cat/blog/cuanto-cuesta-reformar-bano-eixample</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reformasmiguel.cat/blog/permisos-reformar-piso-barcelona-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://reformasmiguel.cat/aviso-legal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

@@ -24,6 +24,7 @@
     "zones": "Zonas",
     "about": "Quiénes somos",
     "faq": "FAQ",
+    "blog": "Blog",
     "call": "Llamar",
     "request_quote": "Pedir presupuesto"
   },
@@ -43,6 +44,7 @@
     "company_projects": "Proyectos realizados",
     "company_zones": "Zonas de trabajo",
     "company_faq": "Preguntas frecuentes",
+    "company_blog": "Blog",
     "company_calc": "Calcular presupuesto",
     "company_contact": "Contacto",
     "copyright": "Reformas Miguel · Barcelona · Todos los derechos reservados",
@@ -613,6 +615,24 @@
     "info_trust_3": "Plazos garantizados",
     "info_trust_4": "+15 años de experiencia",
     "info_trust_5": "Equipo propio, sin subcontratas"
+  },
+  "blog": {
+    "breadcrumb": "Blog",
+    "hero_badge": "Recursos y guías",
+    "hero_title": "Artículos para hacer una reforma sin sorpresas",
+    "hero_subtitle": "Precios reales, trámites, plazos y decisiones clave de cualquier obra en Barcelona, contados sin rodeos.",
+    "list_meta_title": "Blog — Reformas Miguel · Reformas en Barcelona",
+    "list_meta_description": "Artículos sobre precios, permisos, plazos y decisiones clave cuando haces una reforma en Barcelona.",
+    "read_more": "Leer",
+    "cta_title": "¿Listo para tu proyecto?",
+    "cta_intro": "Mientras lees, también puedes pedir presupuesto. Sin compromiso.",
+    "cta_calc": "Calcular presupuesto",
+    "cta_contact": "Contactar",
+    "post_cta_title": "¿Te hacemos un presupuesto para tu caso?",
+    "post_cta_intro": "Visita gratuita. Precio cerrado por escrito en 24h.",
+    "post_cta_calc": "Calcular presupuesto",
+    "post_cta_contact": "Contactar",
+    "related_title": "Te puede interesar"
   },
   "calc": {
     "breadcrumb": "Calcular presupuesto",
