@@ -8,7 +8,7 @@
           <i class="bi bi-star-fill me-1"></i> +15 años reformando Barcelona
         </span>
 
-        <h1 class="display-4 fw-black text-white mb-3" style="font-family:'Poppins',sans-serif;font-weight:800;line-height:1.15;">
+        <h1 class="display-4 fw-black text-white mb-3" style="font-weight:800;line-height:1.15;">
           Reformas integrales en Barcelona<br>
           <span class="text-warning">sin sorpresas ni retrasos</span>
         </h1>
@@ -494,19 +494,23 @@
           <h5 class="fw-bold text-dark mb-4">
             <i class="bi bi-pencil-square me-2 text-warning"></i>Cuéntanos tu proyecto
           </h5>
-          <form>
+          <form #f="ngForm" (ngSubmit)="enviar(f)" novalidate>
             <div class="mb-3">
               <label class="form-label fw-semibold text-dark small">Nombre *</label>
-              <input type="text" class="form-control" placeholder="¿Cómo te llamas?">
+              <input type="text" class="form-control" placeholder="¿Cómo te llamas?"
+                     name="nombre" [(ngModel)]="form.nombre" required #nombre="ngModel"
+                     [class.is-invalid]="nombre.invalid && nombre.touched">
             </div>
             <div class="mb-3">
               <label class="form-label fw-semibold text-dark small">Teléfono *</label>
-              <input type="tel" class="form-control" placeholder="Para poder llamarte">
+              <input type="tel" class="form-control" placeholder="Para poder llamarte"
+                     name="telefono" [(ngModel)]="form.telefono" required #telefono="ngModel"
+                     [class.is-invalid]="telefono.invalid && telefono.touched">
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
               <label class="form-label fw-semibold text-dark small">¿Qué quieres reformar?</label>
-              <select class="form-select">
-                <option value="" disabled selected>Selecciona una opción</option>
+              <select class="form-select" name="tipo" [(ngModel)]="form.tipo">
+                <option value="" disabled>Selecciona una opción</option>
                 <option>Reforma integral del piso</option>
                 <option>Reforma de baño</option>
                 <option>Reforma de cocina</option>
@@ -515,10 +519,18 @@
                 <option>Otro</option>
               </select>
             </div>
-            <a href="https://wa.me/34646450767?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
-               class="btn btn-warning btn-lg w-100 fw-bold" target="_blank" rel="noopener">
+            <div class="form-check small mb-3">
+              <input class="form-check-input" type="checkbox" id="rgpd-home"
+                     name="rgpd" [(ngModel)]="form.rgpd" required #rgpd="ngModel"
+                     [class.is-invalid]="rgpd.invalid && rgpd.touched">
+              <label class="form-check-label text-muted" for="rgpd-home">
+                Acepto la
+                <a routerLink="/politica-de-privacidad" class="text-decoration-underline">política de privacidad</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
               <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
-            </a>
+            </button>
             <p class="text-muted text-center mt-3 small">
               O llámanos al <a href="tel:+34646450767" class="text-dark fw-semibold">+34 646 450 767</a>
             </p>

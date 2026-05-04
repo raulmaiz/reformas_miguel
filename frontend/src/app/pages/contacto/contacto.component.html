@@ -9,7 +9,7 @@
     </nav>
     <div class="col-lg-7">
       <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-chat-dots me-1"></i> Respuesta en 24h</span>
-      <h1 class="display-5 fw-black text-white mb-3" style="font-family:'Poppins',sans-serif;">
+      <h1 class="display-5 fw-black text-white mb-3" style="">
         Pide tu presupuesto<br>
         <span class="text-warning">gratuito sin compromiso</span>
       </h1>
@@ -33,32 +33,41 @@
           </h4>
           <p class="text-muted small mb-4">Respondemos en menos de 24 horas</p>
 
-          <form>
+          <form #f="ngForm" (ngSubmit)="enviar(f)" novalidate>
             <div class="row g-3">
               <div class="col-sm-6">
                 <label class="form-label fw-semibold small">Nombre *</label>
-                <input type="text" class="form-control" placeholder="¿Cómo te llamas?">
+                <input type="text" class="form-control" placeholder="¿Cómo te llamas?"
+                       name="nombre" [(ngModel)]="form.nombre" required #nombre="ngModel"
+                       [class.is-invalid]="nombre.invalid && nombre.touched">
               </div>
               <div class="col-sm-6">
                 <label class="form-label fw-semibold small">Apellidos</label>
-                <input type="text" class="form-control" placeholder="Apellidos (opcional)">
+                <input type="text" class="form-control" placeholder="Apellidos (opcional)"
+                       name="apellidos" [(ngModel)]="form.apellidos">
               </div>
               <div class="col-sm-6">
                 <label class="form-label fw-semibold small">Teléfono *</label>
-                <input type="tel" class="form-control" placeholder="+34 646 450 767">
+                <input type="tel" class="form-control" placeholder="+34 600 000 000"
+                       name="telefono" [(ngModel)]="form.telefono" required #telefono="ngModel"
+                       [class.is-invalid]="telefono.invalid && telefono.touched">
               </div>
               <div class="col-sm-6">
                 <label class="form-label fw-semibold small">Email</label>
-                <input type="email" class="form-control" placeholder="tu&#64;email.com (opcional)">
+                <input type="email" class="form-control" placeholder="tu&#64;email.com (opcional)"
+                       name="email" [(ngModel)]="form.email">
               </div>
               <div class="col-12">
                 <label class="form-label fw-semibold small">Zona *</label>
-                <input type="text" class="form-control" placeholder="¿En qué barrio o ciudad?">
+                <input type="text" class="form-control" placeholder="¿En qué barrio o ciudad?"
+                       name="zona" [(ngModel)]="form.zona" required #zona="ngModel"
+                       [class.is-invalid]="zona.invalid && zona.touched">
               </div>
               <div class="col-12">
                 <label class="form-label fw-semibold small">¿Qué quieres reformar? *</label>
-                <select class="form-select">
-                  <option value="" disabled selected>Selecciona el tipo de reforma</option>
+                <select class="form-select" name="tipo" [(ngModel)]="form.tipo" required
+                        #tipo="ngModel" [class.is-invalid]="tipo.invalid && tipo.touched">
+                  <option value="" disabled>Selecciona el tipo de reforma</option>
                   <option>Reforma integral del piso</option>
                   <option>Reforma de baño</option>
                   <option>Reforma de cocina</option>
@@ -71,15 +80,27 @@
               <div class="col-12">
                 <label class="form-label fw-semibold small">Cuéntanos más (opcional)</label>
                 <textarea class="form-control" rows="3"
-                          placeholder="Estado actual, superficie aproximada, materiales en mente..."></textarea>
+                          placeholder="Estado actual, superficie aproximada, materiales en mente..."
+                          name="detalles" [(ngModel)]="form.detalles"></textarea>
               </div>
               <div class="col-12">
-                <a href="https://wa.me/34646450767?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20para%20una%20reforma"
-                   class="btn btn-warning btn-lg w-100 fw-bold" target="_blank" rel="noopener">
+                <div class="form-check small">
+                  <input class="form-check-input" type="checkbox" id="rgpd-check"
+                         name="rgpd" [(ngModel)]="form.rgpd" required #rgpd="ngModel"
+                         [class.is-invalid]="rgpd.invalid && rgpd.touched">
+                  <label class="form-check-label text-muted" for="rgpd-check">
+                    He leído y acepto la
+                    <a routerLink="/politica-de-privacidad" class="text-decoration-underline">política de privacidad</a>.
+                    Al enviar, mis datos se compartirán con Reformas Miguel únicamente para gestionar mi solicitud.
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
                   <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
-                </a>
+                </button>
                 <p class="text-muted text-center small mt-2 mb-0">
-                  Al pulsar abrirás WhatsApp con tu mensaje. Puedes añadir detalles adicionales.
+                  Al enviar abrimos WhatsApp con tus datos ya rellenados.
                 </p>
               </div>
             </div>
