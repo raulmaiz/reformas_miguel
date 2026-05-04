@@ -120,6 +120,75 @@
           }
         </div>
 
+        <!-- GARANTÍA Y POSTOBRA -->
+        <h4 class="fw-bold mb-4">
+          <i class="bi bi-shield-check me-2 text-warning"></i>{{ 'faq_pg.section_warranty' | translate }}
+        </h4>
+        <div class="accordion mb-5" id="faqGarantia">
+          @for (entry of warranty; track entry.htmlId) {
+            <div class="accordion-item mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button"
+                        data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#' + entry.htmlId">
+                  {{ entry.qKey | translate }}
+                </button>
+              </h2>
+              <div [id]="entry.htmlId" class="accordion-collapse collapse" data-bs-parent="#faqGarantia">
+                <div class="accordion-body text-muted">
+                  {{ entry.aKey | translate }}
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- DURANTE LA OBRA -->
+        <h4 class="fw-bold mb-4">
+          <i class="bi bi-tools me-2 text-warning"></i>{{ 'faq_pg.section_during' | translate }}
+        </h4>
+        <div class="accordion mb-5" id="faqDuring">
+          @for (entry of during; track entry.htmlId) {
+            <div class="accordion-item mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button"
+                        data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#' + entry.htmlId">
+                  {{ entry.qKey | translate }}
+                </button>
+              </h2>
+              <div [id]="entry.htmlId" class="accordion-collapse collapse" data-bs-parent="#faqDuring">
+                <div class="accordion-body text-muted">
+                  {{ entry.aKey | translate }}
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- CASOS ESPECIALES -->
+        <h4 class="fw-bold mb-4">
+          <i class="bi bi-stars me-2 text-warning"></i>{{ 'faq_pg.section_special' | translate }}
+        </h4>
+        <div class="accordion mb-5" id="faqSpecial">
+          @for (entry of special; track entry.htmlId) {
+            <div class="accordion-item mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button"
+                        data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#' + entry.htmlId">
+                  {{ entry.qKey | translate }}
+                </button>
+              </h2>
+              <div [id]="entry.htmlId" class="accordion-collapse collapse" data-bs-parent="#faqSpecial">
+                <div class="accordion-body text-muted">
+                  {{ entry.aKey | translate }}
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
         <!-- CTA inline -->
         <div class="p-5 bg-dark text-center rounded-4 mt-4">
           <h4 class="text-white fw-bold mb-2">{{ 'faq_pg.more_q_title' | translate }}</h4>
