@@ -46,6 +46,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contacto/contacto.component').then(m => m.ContactoComponent)
   },
   {
+    path: 'calcular-presupuesto',
+    loadComponent: () => import('./pages/calcular-presupuesto/calcular-presupuesto.component').then(m => m.CalcularPresupuestoComponent)
+  },
+  {
     path: 'aviso-legal',
     loadComponent: () => import('./pages/legal/aviso-legal.component').then(m => m.AvisoLegalComponent)
   },

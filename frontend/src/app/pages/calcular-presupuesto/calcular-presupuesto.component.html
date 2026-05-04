@@ -1,0 +1,210 @@
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+        <li class="breadcrumb-item active text-white">{{ 'calc.breadcrumb' | translate }}</li>
+      </ol>
+    </nav>
+    <div class="col-lg-8">
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-calculator me-1"></i> {{ 'calc.hero_badge' | translate }}</span>
+      <h1 class="display-5 fw-black text-white mb-3">
+        {{ 'calc.hero_title_1' | translate }}<br>
+        <span class="text-warning">{{ 'calc.hero_title_2' | translate }}</span>
+      </h1>
+      <p class="lead text-white">
+        {{ 'calc.hero_subtitle' | translate }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- Progreso -->
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <small class="text-muted fw-semibold">
+            {{ 'calc.progress_step' | translate }} {{ step + 1 }} / {{ totalSteps }}
+          </small>
+          <small class="text-warning fw-bold">{{ progressPct() }}%</small>
+        </div>
+        <div class="progress mb-5" style="height:8px;border-radius:4px;">
+          <div class="progress-bar bg-warning" role="progressbar"
+               [style.width.%]="progressPct()" [attr.aria-valuenow]="progressPct()"></div>
+        </div>
+
+        <!-- Step 0: Tipo de reforma -->
+        @if (step === 0) {
+          <div class="calc-step">
+            <h2 class="section-title mb-2">{{ 'calc.q1_title' | translate }}</h2>
+            <p class="text-muted mb-4">{{ 'calc.q1_intro' | translate }}</p>
+            <div class="row g-3">
+              @for (t of tipos; track t.value) {
+                <div class="col-sm-6">
+                  <button type="button" class="calc-card w-100" (click)="selectTipo(t)"
+                          [class.selected]="data.tipo === t.value">
+                    <i class="bi {{ t.icon }}"></i>
+                    <span class="fw-semibold">{{ t.labelKey | translate }}</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Step 1: Superficie -->
+        @if (step === 1) {
+          <div class="calc-step">
+            <h2 class="section-title mb-2">{{ 'calc.q2_title' | translate }}</h2>
+            <p class="text-muted mb-4">{{ 'calc.q2_intro' | translate }}</p>
+            <div class="bg-light p-4 rounded-3">
+              <label class="form-label fw-semibold small">{{ 'calc.q2_label' | translate }}</label>
+              <div class="input-group input-group-lg">
+                <input type="number" class="form-control" min="1" max="500"
+                       [(ngModel)]="data.superficie"
+                       [disabled]="data.superficieUnsure"
+                       [placeholder]="'calc.q2_placeholder' | translate">
+                <span class="input-group-text">m²</span>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="unsure-size"
+                       [checked]="data.superficieUnsure"
+                       (change)="toggleUnsureSuperficie()">
+                <label class="form-check-label small text-muted" for="unsure-size">
+                  {{ 'calc.q2_unsure' | translate }}
+                </label>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Step 2: Cuándo -->
+        @if (step === 2) {
+          <div class="calc-step">
+            <h2 class="section-title mb-2">{{ 'calc.q3_title' | translate }}</h2>
+            <p class="text-muted mb-4">{{ 'calc.q3_intro' | translate }}</p>
+            <div class="row g-3">
+              @for (c of cuandos; track c.value) {
+                <div class="col-sm-6">
+                  <button type="button" class="calc-card w-100" (click)="selectCuando(c)"
+                          [class.selected]="data.cuando === c.value">
+                    <i class="bi {{ c.icon }}"></i>
+                    <span class="fw-semibold">{{ c.labelKey | translate }}</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Step 3: Datos contacto -->
+        @if (step === 3) {
+          <div class="calc-step">
+            <h2 class="section-title mb-2">{{ 'calc.q4_title' | translate }}</h2>
+            <p class="text-muted mb-4">{{ 'calc.q4_intro' | translate }}</p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">{{ 'calc.q4_name' | translate }}</label>
+                <input type="text" class="form-control form-control-lg"
+                       [(ngModel)]="data.nombre" name="nombre">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">{{ 'calc.q4_phone' | translate }}</label>
+                <input type="tel" class="form-control form-control-lg"
+                       [(ngModel)]="data.telefono" name="telefono">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">{{ 'calc.q4_zone' | translate }}</label>
+                <input type="text" class="form-control form-control-lg"
+                       [(ngModel)]="data.zona" name="zona">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label fw-semibold small">{{ 'calc.q4_email' | translate }}</label>
+                <input type="email" class="form-control form-control-lg"
+                       [(ngModel)]="data.email" name="email">
+              </div>
+              <div class="col-12">
+                <div class="form-check small">
+                  <input class="form-check-input" type="checkbox" id="rgpd-calc"
+                         [(ngModel)]="data.rgpd" name="rgpd">
+                  <label class="form-check-label text-muted" for="rgpd-calc">
+                    {{ 'calc.q4_rgpd_l1' | translate }}
+                    <a routerLink="/politica-de-privacidad" class="text-decoration-underline">{{ 'calc.q4_rgpd_link' | translate }}</a>{{ 'calc.q4_rgpd_l2' | translate }}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Step 4: Resumen + envío -->
+        @if (step === 4) {
+          <div class="calc-step">
+            <h2 class="section-title mb-2">{{ 'calc.summary_title' | translate }}</h2>
+            <p class="text-muted mb-4">{{ 'calc.summary_intro' | translate }}</p>
+            <div class="bg-light p-4 rounded-3 mb-4">
+              <dl class="row mb-0 small">
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_type_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-2">{{ data.tipoLabelKey | translate }}</dd>
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_size_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-2">
+                  @if (data.superficieUnsure) {
+                    {{ 'calc.q2_unsure' | translate }}
+                  } @else {
+                    {{ data.superficie }} m²
+                  }
+                </dd>
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_when_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-2">{{ data.cuandoLabelKey | translate }}</dd>
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_name_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-2">{{ data.nombre }}</dd>
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_phone_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-2">{{ data.telefono }}</dd>
+                <dt class="col-sm-4 text-muted">{{ 'calc.summary_zone_label' | translate }}</dt>
+                <dd class="col-sm-8 fw-semibold mb-0">{{ data.zona }}</dd>
+                @if (data.email) {
+                  <dt class="col-sm-4 text-muted mt-2">{{ 'calc.summary_email_label' | translate }}</dt>
+                  <dd class="col-sm-8 fw-semibold mb-0 mt-2">{{ data.email }}</dd>
+                }
+              </dl>
+            </div>
+            <button type="button" class="btn btn-warning btn-lg w-100 fw-bold" (click)="enviar()">
+              <i class="bi bi-whatsapp me-2"></i>{{ 'calc.summary_send' | translate }}
+            </button>
+            <p class="text-muted text-center small mt-3 mb-0">
+              {{ 'calc.summary_help' | translate }}
+            </p>
+          </div>
+        }
+
+        <!-- Navegación -->
+        @if (step < totalSteps - 1) {
+          <div class="d-flex justify-content-between gap-2 mt-5">
+            @if (step > 0) {
+              <button type="button" class="btn btn-outline-dark" (click)="prev()">
+                <i class="bi bi-arrow-left me-1"></i>{{ 'calc.step_back' | translate }}
+              </button>
+            } @else {
+              <span></span>
+            }
+            <button type="button" class="btn btn-warning fw-bold px-4"
+                    [disabled]="!canAdvance()"
+                    (click)="next()">
+              {{ 'calc.step_next' | translate }}<i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        } @else {
+          <div class="text-center mt-4">
+            <button type="button" class="btn btn-link text-muted small" (click)="prev()">
+              <i class="bi bi-arrow-left me-1"></i>{{ 'calc.step_back' | translate }}
+            </button>
+          </div>
+        }
+
+      </div>
+    </div>
+  </div>
+</section>
