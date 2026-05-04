@@ -1,0 +1,18 @@
+{
+  "name": "Reformas Miguel — Reformas en Barcelona",
+  "short_name": "Reformas Miguel",
+  "description": "Reformas integrales, baños, cocinas, pintura, electricidad y fontanería en Barcelona y área metropolitana.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FFC107",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

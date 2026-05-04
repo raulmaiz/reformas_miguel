@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC107"/>
+      <stop offset="100%" stop-color="#e6a800"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity="0.08">
+    <rect x="940" y="-50" width="22" height="730" fill="#1a1a1a" transform="rotate(15 940 0)"/>
+    <rect x="990" y="-50" width="22" height="730" fill="#1a1a1a" transform="rotate(15 990 0)"/>
+    <rect x="1040" y="-50" width="22" height="730" fill="#1a1a1a" transform="rotate(15 1040 0)"/>
+    <rect x="1090" y="-50" width="22" height="730" fill="#1a1a1a" transform="rotate(15 1090 0)"/>
+  </g>
+
+  <text x="80" y="200" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="900" font-size="92" fill="#1a1a1a" letter-spacing="-2">
+    Reformas Miguel
+  </text>
+
+  <text x="80" y="270" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600" font-size="42" fill="#1a1a1a" opacity="0.75">
+    Reformas integrales en Barcelona
+  </text>
+
+  <rect x="80" y="320" width="200" height="6" fill="#1a1a1a"/>
+
+  <text x="80" y="430" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-style="italic" font-weight="600" font-size="34" fill="#1a1a1a" opacity="0.9">
+    "Donde pasa Miguel, no hay
+  </text>
+  <text x="80" y="475" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-style="italic" font-weight="600" font-size="34" fill="#1a1a1a" opacity="0.9">
+    que volver a pasar"
+  </text>
+
+  <text x="80" y="580" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="800" font-size="26" fill="#1a1a1a">
+    reformasmiguel.cat
+  </text>
+</svg>
