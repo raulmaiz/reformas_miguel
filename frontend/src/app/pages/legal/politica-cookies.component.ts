@@ -90,8 +90,6 @@ import { RouterLink } from '@angular/router';
               <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
             </ul>
 
-            <p class="text-muted small mt-5">Última actualización: [PENDIENTE — fecha]</p>
-
           </div>
         </div>
       </div>
