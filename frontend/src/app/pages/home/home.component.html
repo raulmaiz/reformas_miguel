@@ -5,46 +5,46 @@
       <div class="col-lg-7">
 
         <span class="hero-badge mb-4 d-inline-block">
-          <i class="bi bi-star-fill me-1"></i> +15 años reformando Barcelona
+          <i class="bi bi-star-fill me-1"></i> {{ 'home.hero_badge' | translate }}
         </span>
 
         <h1 class="display-4 fw-black text-white mb-3" style="font-weight:800;line-height:1.15;">
-          Reformas integrales en Barcelona<br>
-          <span class="text-warning">sin sorpresas ni retrasos</span>
+          {{ 'home.hero_title_1' | translate }}<br>
+          <span class="text-warning">{{ 'home.hero_title_2' | translate }}</span>
         </h1>
 
         <p class="lead mb-2" style="font-size:1.15rem;color:rgba(255,255,255,0.8);">
-          Cocinas, baños y reformas completas con presupuesto claro y trato directo.
+          {{ 'home.hero_subtitle' | translate }}
         </p>
         <p class="text-warning fst-italic mb-4" style="font-size:0.95rem;opacity:0.9;">
-          <i class="bi bi-quote me-1"></i>Donde pasa Miguel, no hay que volver a pasar<i class="bi bi-quote ms-1"></i>
+          <i class="bi bi-quote me-1"></i>{{ 'home.hero_quote' | translate }}<i class="bi bi-quote ms-1"></i>
         </p>
 
         <div class="d-flex flex-wrap gap-3 hero-btns">
           <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
-            <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+            <i class="bi bi-chat-dots me-2"></i>{{ 'home.hero_cta_quote' | translate }}
           </a>
-          <a href="https://wa.me/34646450767?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto"
+          <a [href]="whatsAppUrl()"
              class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
             <i class="bi bi-whatsapp me-2"></i>WhatsApp
           </a>
           <a href="tel:+34646450767" class="btn btn-outline-secondary btn-lg px-4">
-            <i class="bi bi-telephone me-2"></i>Llamar
+            <i class="bi bi-telephone me-2"></i>{{ 'home.hero_cta_call' | translate }}
           </a>
         </div>
 
         <div class="d-flex flex-wrap gap-4 mt-5">
           <div class="d-flex align-items-center gap-2 small" style="color:rgba(255,255,255,0.75);">
-            <i class="bi bi-check-circle-fill text-warning fs-5"></i>Presupuesto gratuito
+            <i class="bi bi-check-circle-fill text-warning fs-5"></i>{{ 'home.hero_check_quote' | translate }}
           </div>
           <div class="d-flex align-items-center gap-2 small" style="color:rgba(255,255,255,0.75);">
-            <i class="bi bi-check-circle-fill text-warning fs-5"></i>Llave en mano
+            <i class="bi bi-check-circle-fill text-warning fs-5"></i>{{ 'home.hero_check_turnkey' | translate }}
           </div>
           <div class="d-flex align-items-center gap-2 small" style="color:rgba(255,255,255,0.75);">
-            <i class="bi bi-check-circle-fill text-warning fs-5"></i>Equipo propio
+            <i class="bi bi-check-circle-fill text-warning fs-5"></i>{{ 'home.hero_check_team' | translate }}
           </div>
           <div class="d-flex align-items-center gap-2 small" style="color:rgba(255,255,255,0.75);">
-            <i class="bi bi-check-circle-fill text-warning fs-5"></i>Toda Barcelona
+            <i class="bi bi-check-circle-fill text-warning fs-5"></i>{{ 'home.hero_check_area' | translate }}
           </div>
         </div>
 
@@ -61,8 +61,8 @@
         <div class="trust-badge">
           <i class="bi bi-file-earmark-check"></i>
           <div>
-            <div class="fw-bold" style="font-size:0.95rem;">Presupuesto gratuito</div>
-            <div class="text-muted" style="font-size:0.8rem;">Sin compromiso, en 24h</div>
+            <div class="fw-bold" style="font-size:0.95rem;">{{ 'home.trust_quote_title' | translate }}</div>
+            <div class="text-muted" style="font-size:0.8rem;">{{ 'home.trust_quote_sub' | translate }}</div>
           </div>
         </div>
       </div>
@@ -70,8 +70,8 @@
         <div class="trust-badge">
           <i class="bi bi-house-check"></i>
           <div>
-            <div class="fw-bold" style="font-size:0.95rem;">Llave en mano</div>
-            <div class="text-muted" style="font-size:0.8rem;">Nos ocupamos de todo</div>
+            <div class="fw-bold" style="font-size:0.95rem;">{{ 'home.trust_turnkey_title' | translate }}</div>
+            <div class="text-muted" style="font-size:0.8rem;">{{ 'home.trust_turnkey_sub' | translate }}</div>
           </div>
         </div>
       </div>
@@ -79,8 +79,8 @@
         <div class="trust-badge">
           <i class="bi bi-geo-alt"></i>
           <div>
-            <div class="fw-bold" style="font-size:0.95rem;">Toda Barcelona</div>
-            <div class="text-muted" style="font-size:0.8rem;">Ciudad y alrededores</div>
+            <div class="fw-bold" style="font-size:0.95rem;">{{ 'home.trust_area_title' | translate }}</div>
+            <div class="text-muted" style="font-size:0.8rem;">{{ 'home.trust_area_sub' | translate }}</div>
           </div>
         </div>
       </div>
@@ -88,8 +88,8 @@
         <div class="trust-badge">
           <i class="bi bi-people"></i>
           <div>
-            <div class="fw-bold" style="font-size:0.95rem;">Equipo propio</div>
-            <div class="text-muted" style="font-size:0.8rem;">Sin subcontratas</div>
+            <div class="fw-bold" style="font-size:0.95rem;">{{ 'home.trust_team_title' | translate }}</div>
+            <div class="text-muted" style="font-size:0.8rem;">{{ 'home.trust_team_sub' | translate }}</div>
           </div>
         </div>
       </div>
@@ -101,11 +101,11 @@
 <section class="py-5 py-lg-6">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Resultados reales</span>
+      <span class="section-label">{{ 'home.ba_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">Así quedan las reformas de Miguel</h2>
+      <h2 class="section-title">{{ 'home.ba_title' | translate }}</h2>
       <p class="text-muted mt-2 mx-auto" style="max-width:520px;">
-        Cada proyecto es diferente, pero el resultado siempre es el mismo: bien hecho y a la primera.
+        {{ 'home.ba_intro' | translate }}
       </p>
     </div>
 
@@ -118,20 +118,20 @@
             <div class="col-6">
               <div class="before-img">
                 <i class="bi bi-droplet"></i>
-                <span class="before-label">Antes</span>
+                <span class="before-label">{{ 'home.ba_before' | translate }}</span>
               </div>
             </div>
             <div class="col-6">
               <div class="after-img">
                 <i class="bi bi-droplet-fill"></i>
-                <span class="after-label">Después</span>
+                <span class="after-label">{{ 'home.ba_after' | translate }}</span>
               </div>
             </div>
           </div>
           <div class="p-3">
-            <span class="badge bg-warning text-dark mb-2">Reforma de baño</span>
-            <h6 class="fw-bold mb-1">Baño completo en Eixample</h6>
-            <p class="text-muted small mb-0">Alicatado, sanitarios nuevos, mampara y suelo. 9 días de obra.</p>
+            <span class="badge bg-warning text-dark mb-2">{{ 'home.ba_bano_badge' | translate }}</span>
+            <h6 class="fw-bold mb-1">{{ 'home.ba_bano_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'home.ba_bano_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -143,20 +143,20 @@
             <div class="col-6">
               <div class="before-img">
                 <i class="bi bi-egg"></i>
-                <span class="before-label">Antes</span>
+                <span class="before-label">{{ 'home.ba_before' | translate }}</span>
               </div>
             </div>
             <div class="col-6">
               <div class="after-img">
                 <i class="bi bi-egg-fried"></i>
-                <span class="after-label">Después</span>
+                <span class="after-label">{{ 'home.ba_after' | translate }}</span>
               </div>
             </div>
           </div>
           <div class="p-3">
-            <span class="badge bg-warning text-dark mb-2">Reforma de cocina</span>
-            <h6 class="fw-bold mb-1">Cocina abierta en Gràcia</h6>
-            <p class="text-muted small mb-0">Derribo de tabique, muebles, encimera y electrodomésticos. 14 días.</p>
+            <span class="badge bg-warning text-dark mb-2">{{ 'home.ba_cocina_badge' | translate }}</span>
+            <h6 class="fw-bold mb-1">{{ 'home.ba_cocina_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'home.ba_cocina_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -168,20 +168,20 @@
             <div class="col-6">
               <div class="before-img">
                 <i class="bi bi-house"></i>
-                <span class="before-label">Antes</span>
+                <span class="before-label">{{ 'home.ba_before' | translate }}</span>
               </div>
             </div>
             <div class="col-6">
               <div class="after-img">
                 <i class="bi bi-house-heart-fill"></i>
-                <span class="after-label">Después</span>
+                <span class="after-label">{{ 'home.ba_after' | translate }}</span>
               </div>
             </div>
           </div>
           <div class="p-3">
-            <span class="badge bg-warning text-dark mb-2">Reforma integral</span>
-            <h6 class="fw-bold mb-1">Piso completo en Hospitalet</h6>
-            <p class="text-muted small mb-0">80m² reformados de arriba abajo. Plazo cumplido: 28 días.</p>
+            <span class="badge bg-warning text-dark mb-2">{{ 'home.ba_integral_badge' | translate }}</span>
+            <h6 class="fw-bold mb-1">{{ 'home.ba_integral_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'home.ba_integral_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
 
     <div class="text-center mt-4">
       <a routerLink="/proyectos-realizados" class="btn btn-outline-dark px-4">
-        <i class="bi bi-images me-2"></i>Ver todos los proyectos
+        <i class="bi bi-images me-2"></i>{{ 'home.ba_cta_all' | translate }}
       </a>
     </div>
   </div>
@@ -200,11 +200,11 @@
 <section class="py-5 py-lg-6 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Lo que hacemos</span>
+      <span class="section-label">{{ 'home.services_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">Servicios de reforma en Barcelona</h2>
+      <h2 class="section-title">{{ 'home.services_title' | translate }}</h2>
       <p class="text-muted mt-2 mx-auto" style="max-width:520px;">
-        Cada servicio pensado para que no tengas que preocuparte de nada. Tú decides, nosotros ejecutamos.
+        {{ 'home.services_intro' | translate }}
       </p>
     </div>
 
@@ -215,13 +215,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-house-gear"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">Reformas integrales</h5>
-              <p class="text-muted small mb-0">Tu piso de arriba abajo. Un único responsable, un único presupuesto.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_integral_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_integral_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Ver más <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'common.see_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -232,13 +232,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-droplet"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">Reformas de baño</h5>
-              <p class="text-muted small mb-0">Un baño nuevo en 7–10 días. Sin polvo, sin drama.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_bano_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_bano_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Ver más <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'common.see_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -249,13 +249,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-egg-fried"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">Reformas de cocina</h5>
-              <p class="text-muted small mb-0">La cocina que siempre quisiste, sin que te cueste el triple de lo esperado.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_cocina_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_cocina_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Ver más <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'common.see_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -266,13 +266,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-brush"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">Pintura y acabados</h5>
-              <p class="text-muted small mb-0">Paredes perfectas. Bien preparadas, bien pintadas, bien terminadas.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_pintura_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_pintura_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Ver más <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'common.see_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -283,13 +283,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-lightning-charge"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">Electricidad y fontanería</h5>
-              <p class="text-muted small mb-0">Instalaciones revisadas y certificadas. Sin improvisaciones.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_electricidad_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_electricidad_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Ver más <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'common.see_more' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -301,13 +301,13 @@
           <div class="d-flex align-items-start gap-3">
             <div class="service-icon-wrap"><i class="bi bi-plus-circle"></i></div>
             <div>
-              <h5 class="fw-bold mb-1">¿No ves lo que buscas?</h5>
-              <p class="text-muted small mb-0">Cuéntanos qué necesitas. Casi seguro que lo hacemos.</p>
+              <h5 class="fw-bold mb-1">{{ 'home.services_other_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.services_other_desc' | translate }}</p>
             </div>
           </div>
           <div class="mt-auto">
             <span class="text-warning fw-semibold small">
-              Consultar <i class="bi bi-arrow-right ms-1"></i>
+              {{ 'home.services_other_cta' | translate }} <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>
         </a>
@@ -322,15 +322,14 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-5">
-        <span class="section-label">Cómo trabajamos</span>
+        <span class="section-label">{{ 'home.process_label' | translate }}</span>
         <div class="divider-amber-left divider-amber mt-2 mb-3"></div>
-        <h2 class="section-title mb-3">Así es una reforma sin sorpresas</h2>
+        <h2 class="section-title mb-3">{{ 'home.process_title' | translate }}</h2>
         <p class="text-muted">
-          El problema con la mayoría de reformas no es la obra en sí, es la falta de comunicación.
-          Con Miguel sabes siempre qué se está haciendo, cuánto queda y cuánto cuesta.
+          {{ 'home.process_intro' | translate }}
         </p>
         <a routerLink="/quienes-somos" class="btn btn-outline-dark mt-3 px-4">
-          Conoce a Miguel <i class="bi bi-arrow-right ms-2"></i>
+          {{ 'home.process_meet_miguel' | translate }} <i class="bi bi-arrow-right ms-2"></i>
         </a>
       </div>
       <div class="col-lg-7">
@@ -339,44 +338,32 @@
           <div class="process-step">
             <div class="step-number">1</div>
             <div>
-              <h5 class="fw-bold mb-1">Visita y presupuesto gratuito</h5>
-              <p class="text-muted small mb-0">
-                Quedamos en la obra, vemos lo que hay que hacer y te damos un precio cerrado por escrito.
-                Sin letras pequeñas ni sorpresas al final.
-              </p>
+              <h5 class="fw-bold mb-1">{{ 'home.process_step1_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.process_step1_desc' | translate }}</p>
             </div>
           </div>
 
           <div class="process-step">
             <div class="step-number">2</div>
             <div>
-              <h5 class="fw-bold mb-1">Planificación clara</h5>
-              <p class="text-muted small mb-0">
-                Antes de empezar tienes un calendario de obra. Sabes cuándo empieza, qué se hace cada día
-                y cuándo vas a poder entrar.
-              </p>
+              <h5 class="fw-bold mb-1">{{ 'home.process_step2_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.process_step2_desc' | translate }}</p>
             </div>
           </div>
 
           <div class="process-step">
             <div class="step-number">3</div>
             <div>
-              <h5 class="fw-bold mb-1">Ejecución limpia y puntual</h5>
-              <p class="text-muted small mb-0">
-                El equipo de Miguel llega, trabaja y deja el espacio recogido cada día.
-                No necesitas estar pendiente de nada.
-              </p>
+              <h5 class="fw-bold mb-1">{{ 'home.process_step3_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.process_step3_desc' | translate }}</p>
             </div>
           </div>
 
           <div class="process-step">
             <div class="step-number">4</div>
             <div>
-              <h5 class="fw-bold mb-1">Entrega y revisión final</h5>
-              <p class="text-muted small mb-0">
-                Revisamos juntos cada detalle. Si algo no está perfecto, se arregla antes de cerrar la obra.
-                Aquí no hay "ya te llamamos".
-              </p>
+              <h5 class="fw-bold mb-1">{{ 'home.process_step4_title' | translate }}</h5>
+              <p class="text-muted small mb-0">{{ 'home.process_step4_desc' | translate }}</p>
             </div>
           </div>
 
@@ -390,9 +377,9 @@
 <section class="py-5 py-lg-6 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Lo que dicen los clientes</span>
+      <span class="section-label">{{ 'home.testi_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">Opiniones de clientes satisfechos</h2>
+      <h2 class="section-title">{{ 'home.testi_title' | translate }}</h2>
     </div>
 
     <div class="row g-4">
@@ -404,14 +391,13 @@
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
           <p class="text-muted mb-3" style="font-size:0.95rem;">
-            "Reformamos el baño completo en menos de 2 semanas. Miguel llegó el primer día con todo planificado
-            y no tuvimos que llamarle ni una vez. Exactamente lo que necesitábamos."
+            "{{ 'home.testi_1_text' | translate }}"
           </p>
           <div class="d-flex align-items-center gap-3">
             <div class="testimonial-avatar">MG</div>
             <div>
-              <div class="fw-bold" style="font-size:0.9rem;">María González</div>
-              <div class="text-muted" style="font-size:0.8rem;">Eixample, Barcelona</div>
+              <div class="fw-bold" style="font-size:0.9rem;">{{ 'home.testi_1_name' | translate }}</div>
+              <div class="text-muted" style="font-size:0.8rem;">{{ 'home.testi_1_loc' | translate }}</div>
             </div>
           </div>
         </div>
@@ -424,14 +410,13 @@
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
           <p class="text-muted mb-3" style="font-size:0.95rem;">
-            "Llevaba años queriendo reformar la cocina pero me daba miedo el caos. Con Miguel fue todo lo contrario:
-            limpio, rápido y al precio que dijimos desde el primer día."
+            "{{ 'home.testi_2_text' | translate }}"
           </p>
           <div class="d-flex align-items-center gap-3">
             <div class="testimonial-avatar">JM</div>
             <div>
-              <div class="fw-bold" style="font-size:0.9rem;">Joan Martínez</div>
-              <div class="text-muted" style="font-size:0.8rem;">Gràcia, Barcelona</div>
+              <div class="fw-bold" style="font-size:0.9rem;">{{ 'home.testi_2_name' | translate }}</div>
+              <div class="text-muted" style="font-size:0.8rem;">{{ 'home.testi_2_loc' | translate }}</div>
             </div>
           </div>
         </div>
@@ -444,14 +429,13 @@
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
           </div>
           <p class="text-muted mb-3" style="font-size:0.95rem;">
-            "Primera reforma bien hecha a la primera. Sin llamadas extra, sin sorpresas en la factura.
-            Ya les he recomendado a tres vecinos del edificio."
+            "{{ 'home.testi_3_text' | translate }}"
           </p>
           <div class="d-flex align-items-center gap-3">
             <div class="testimonial-avatar">FP</div>
             <div>
-              <div class="fw-bold" style="font-size:0.9rem;">Família Puig</div>
-              <div class="text-muted" style="font-size:0.8rem;">Hospitalet de Llobregat</div>
+              <div class="fw-bold" style="font-size:0.9rem;">{{ 'home.testi_3_name' | translate }}</div>
+              <div class="text-muted" style="font-size:0.8rem;">{{ 'home.testi_3_loc' | translate }}</div>
             </div>
           </div>
         </div>
@@ -467,24 +451,23 @@
     <div class="row align-items-center g-5">
 
       <div class="col-lg-6">
-        <span class="section-label">Sin compromiso</span>
+        <span class="section-label">{{ 'home.cta_label' | translate }}</span>
         <h2 class="section-title section-title-white mt-2 mb-3">
-          Pide tu presupuesto<br>
-          <span class="text-warning">en menos de 24 horas</span>
+          {{ 'home.cta_title_1' | translate }}<br>
+          <span class="text-warning">{{ 'home.cta_title_2' | translate }}</span>
         </h2>
         <p class="text-secondary mb-4">
-          Cuéntanos qué quieres reformar. Te llamamos, quedamos y te damos un precio cerrado por escrito.
-          Gratis, sin compromiso y sin trampas.
+          {{ 'home.cta_intro' | translate }}
         </p>
         <div class="d-flex gap-3 flex-wrap">
           <div class="d-flex align-items-center gap-2 text-secondary small">
-            <i class="bi bi-check-circle-fill text-warning"></i>Respuesta en 24h
+            <i class="bi bi-check-circle-fill text-warning"></i>{{ 'home.cta_check_24h' | translate }}
           </div>
           <div class="d-flex align-items-center gap-2 text-secondary small">
-            <i class="bi bi-check-circle-fill text-warning"></i>Precio cerrado por escrito
+            <i class="bi bi-check-circle-fill text-warning"></i>{{ 'home.cta_check_written' | translate }}
           </div>
           <div class="d-flex align-items-center gap-2 text-secondary small">
-            <i class="bi bi-check-circle-fill text-warning"></i>0% compromiso
+            <i class="bi bi-check-circle-fill text-warning"></i>{{ 'home.cta_check_no_commit' | translate }}
           </div>
         </div>
       </div>
@@ -492,31 +475,31 @@
       <div class="col-lg-6">
         <div class="bg-white rounded-4 p-4 p-lg-5 shadow-lg">
           <h5 class="fw-bold text-dark mb-4">
-            <i class="bi bi-pencil-square me-2 text-warning"></i>Cuéntanos tu proyecto
+            <i class="bi bi-pencil-square me-2 text-warning"></i>{{ 'home.form_title' | translate }}
           </h5>
           <form #f="ngForm" (ngSubmit)="enviar(f)" novalidate>
             <div class="mb-3">
-              <label class="form-label fw-semibold text-dark small">Nombre *</label>
-              <input type="text" class="form-control" placeholder="¿Cómo te llamas?"
+              <label class="form-label fw-semibold text-dark small">{{ 'home.form_name' | translate }}</label>
+              <input type="text" class="form-control" [placeholder]="'home.form_name_ph' | translate"
                      name="nombre" [(ngModel)]="form.nombre" required #nombre="ngModel"
                      [class.is-invalid]="nombre.invalid && nombre.touched">
             </div>
             <div class="mb-3">
-              <label class="form-label fw-semibold text-dark small">Teléfono *</label>
-              <input type="tel" class="form-control" placeholder="Para poder llamarte"
+              <label class="form-label fw-semibold text-dark small">{{ 'home.form_phone' | translate }}</label>
+              <input type="tel" class="form-control" [placeholder]="'home.form_phone_ph' | translate"
                      name="telefono" [(ngModel)]="form.telefono" required #telefono="ngModel"
                      [class.is-invalid]="telefono.invalid && telefono.touched">
             </div>
             <div class="mb-3">
-              <label class="form-label fw-semibold text-dark small">¿Qué quieres reformar?</label>
+              <label class="form-label fw-semibold text-dark small">{{ 'home.form_type' | translate }}</label>
               <select class="form-select" name="tipo" [(ngModel)]="form.tipo">
-                <option value="" disabled>Selecciona una opción</option>
-                <option>Reforma integral del piso</option>
-                <option>Reforma de baño</option>
-                <option>Reforma de cocina</option>
-                <option>Pintura y acabados</option>
-                <option>Electricidad o fontanería</option>
-                <option>Otro</option>
+                <option value="" disabled>{{ 'home.form_type_ph' | translate }}</option>
+                <option>{{ 'home.form_type_integral' | translate }}</option>
+                <option>{{ 'home.form_type_bano' | translate }}</option>
+                <option>{{ 'home.form_type_cocina' | translate }}</option>
+                <option>{{ 'home.form_type_pintura' | translate }}</option>
+                <option>{{ 'home.form_type_electricidad' | translate }}</option>
+                <option>{{ 'home.form_type_other' | translate }}</option>
               </select>
             </div>
             <div class="form-check small mb-3">
@@ -524,15 +507,15 @@
                      name="rgpd" [(ngModel)]="form.rgpd" required #rgpd="ngModel"
                      [class.is-invalid]="rgpd.invalid && rgpd.touched">
               <label class="form-check-label text-muted" for="rgpd-home">
-                Acepto la
-                <a routerLink="/politica-de-privacidad" class="text-decoration-underline">política de privacidad</a>.
+                {{ 'home.form_rgpd_l1' | translate }}
+                <a routerLink="/politica-de-privacidad" class="text-decoration-underline">{{ 'home.form_rgpd_link' | translate }}</a>{{ 'home.form_rgpd_l2' | translate }}
               </label>
             </div>
             <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
-              <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+              <i class="bi bi-whatsapp me-2"></i>{{ 'home.form_submit' | translate }}
             </button>
             <p class="text-muted text-center mt-3 small">
-              O llámanos al <a href="tel:+34646450767" class="text-dark fw-semibold">+34 646 450 767</a>
+              {{ 'home.form_or_call' | translate }} <a href="tel:+34646450767" class="text-dark fw-semibold">+34 646 450 767</a>
             </p>
           </form>
         </div>
@@ -546,14 +529,14 @@
 <section class="py-4 bg-light border-top">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center gap-2 justify-content-center">
-      <span class="text-muted small fw-semibold me-2">Trabajamos en:</span>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Barcelona ciudad</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Eixample</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Gràcia</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Hospitalet</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Badalona</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">Sabadell</a>
-      <a routerLink="/zonas-de-trabajo" class="badge bg-warning text-dark text-decoration-none px-3 py-2 fw-semibold">Ver todas las zonas →</a>
+      <span class="text-muted small fw-semibold me-2">{{ 'home.zones_label' | translate }}</span>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_city' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_eixample' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_gracia' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_hospitalet' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_badalona' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-dark text-white text-decoration-none px-3 py-2">{{ 'home.zones_sabadell' | translate }}</a>
+      <a routerLink="/zonas-de-trabajo" class="badge bg-warning text-dark text-decoration-none px-3 py-2 fw-semibold">{{ 'home.zones_all' | translate }}</a>
     </div>
   </div>
 </section>

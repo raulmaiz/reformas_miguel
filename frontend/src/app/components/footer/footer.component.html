@@ -8,49 +8,49 @@
           <img src="/logo.jpg" alt="Reformas Miguel" width="64" height="64"
                class="rounded-circle bg-white p-1" style="object-fit:cover;flex-shrink:0;">
           <p class="text-warning fst-italic mb-0" style="font-size:0.9rem;line-height:1.3;">
-            Donde pasa Miguel,<br>no hay que volver a pasar
+            {{ 'nav.slogan_l1' | translate }}<br>{{ 'nav.slogan_l2' | translate }}
           </p>
         </div>
         <p class="text-secondary small mb-3">
-          Especialistas en reformas integrales en Barcelona. Más de 15 años transformando hogares con calidad, claridad y trato directo.
+          {{ 'footer.tagline' | translate }}
         </p>
         <div class="d-flex gap-2">
           <a href="https://wa.me/34646450767" class="btn btn-sm btn-success" target="_blank" rel="noopener">
-            <i class="bi bi-whatsapp me-1"></i>WhatsApp
+            <i class="bi bi-whatsapp me-1"></i>{{ 'footer.wa' | translate }}
           </a>
           <a href="tel:+34646450767" class="btn btn-sm btn-outline-warning">
-            <i class="bi bi-telephone me-1"></i>Llamar
+            <i class="bi bi-telephone me-1"></i>{{ 'footer.call' | translate }}
           </a>
         </div>
       </div>
 
       <!-- Servicios -->
       <div class="col-sm-6 col-lg-2">
-        <h6 class="fw-bold text-warning mb-3">Servicios</h6>
+        <h6 class="fw-bold text-warning mb-3">{{ 'footer.services_heading' | translate }}</h6>
         <ul class="list-unstyled small">
           <li class="mb-2">
             <a routerLink="/reformas-integrales-barcelona" class="text-secondary text-decoration-none hover-white">
-              Reformas integrales
+              {{ 'nav.services_integral' | translate }}
             </a>
           </li>
           <li class="mb-2">
             <a routerLink="/reformas-bano-barcelona" class="text-secondary text-decoration-none">
-              Reformas de baño
+              {{ 'nav.services_bano' | translate }}
             </a>
           </li>
           <li class="mb-2">
             <a routerLink="/reformas-cocina-barcelona" class="text-secondary text-decoration-none">
-              Reformas de cocina
+              {{ 'nav.services_cocina' | translate }}
             </a>
           </li>
           <li class="mb-2">
             <a routerLink="/pintura-y-acabados" class="text-secondary text-decoration-none">
-              Pintura y acabados
+              {{ 'nav.services_pintura' | translate }}
             </a>
           </li>
           <li class="mb-2">
             <a routerLink="/electricidad-y-fontaneria" class="text-secondary text-decoration-none">
-              Electricidad y fontanería
+              {{ 'nav.services_electricidad' | translate }}
             </a>
           </li>
         </ul>
@@ -58,29 +58,29 @@
 
       <!-- Empresa -->
       <div class="col-sm-6 col-lg-2">
-        <h6 class="fw-bold text-warning mb-3">Empresa</h6>
+        <h6 class="fw-bold text-warning mb-3">{{ 'footer.company_heading' | translate }}</h6>
         <ul class="list-unstyled small">
           <li class="mb-2">
-            <a routerLink="/quienes-somos" class="text-secondary text-decoration-none">Quiénes somos</a>
+            <a routerLink="/quienes-somos" class="text-secondary text-decoration-none">{{ 'footer.company_about' | translate }}</a>
           </li>
           <li class="mb-2">
-            <a routerLink="/proyectos-realizados" class="text-secondary text-decoration-none">Proyectos realizados</a>
+            <a routerLink="/proyectos-realizados" class="text-secondary text-decoration-none">{{ 'footer.company_projects' | translate }}</a>
           </li>
           <li class="mb-2">
-            <a routerLink="/zonas-de-trabajo" class="text-secondary text-decoration-none">Zonas de trabajo</a>
+            <a routerLink="/zonas-de-trabajo" class="text-secondary text-decoration-none">{{ 'footer.company_zones' | translate }}</a>
           </li>
           <li class="mb-2">
-            <a routerLink="/preguntas-frecuentes" class="text-secondary text-decoration-none">Preguntas frecuentes</a>
+            <a routerLink="/preguntas-frecuentes" class="text-secondary text-decoration-none">{{ 'footer.company_faq' | translate }}</a>
           </li>
           <li class="mb-2">
-            <a routerLink="/contacto" class="text-secondary text-decoration-none">Contacto</a>
+            <a routerLink="/contacto" class="text-secondary text-decoration-none">{{ 'footer.company_contact' | translate }}</a>
           </li>
         </ul>
       </div>
 
       <!-- Contacto -->
       <div class="col-lg-4">
-        <h6 class="fw-bold text-warning mb-3">Contacto</h6>
+        <h6 class="fw-bold text-warning mb-3">{{ 'footer.contact_heading' | translate }}</h6>
         <ul class="list-unstyled small text-secondary">
           <li class="mb-2">
             <i class="bi bi-telephone me-2 text-warning"></i>
@@ -89,7 +89,7 @@
           <li class="mb-2">
             <i class="bi bi-whatsapp me-2 text-warning"></i>
             <a href="https://wa.me/34646450767" class="text-secondary text-decoration-none" target="_blank">
-              WhatsApp disponible
+              {{ 'footer.wa_available' | translate }}
             </a>
           </li>
           <li class="mb-2">
@@ -98,11 +98,11 @@
           </li>
           <li class="mb-2">
             <i class="bi bi-geo-alt me-2 text-warning"></i>
-            Barcelona y alrededores
+            {{ 'footer.area' | translate }}
           </li>
           <li class="mb-2">
             <i class="bi bi-clock me-2 text-warning"></i>
-            Lun–Vie 8:00–19:00 · Sáb 9:00–14:00
+            {{ 'footer.hours' | translate }}
           </li>
         </ul>
       </div>
@@ -113,12 +113,12 @@
 
     <div class="row align-items-center g-3">
       <div class="col-md-6 text-center text-md-start small text-secondary">
-        © {{ year }} Reformas Miguel · Barcelona · Todos los derechos reservados
+        © {{ year }} {{ 'footer.copyright' | translate }}
       </div>
       <div class="col-md-6 text-center text-md-end small">
-        <a routerLink="/aviso-legal" class="text-secondary text-decoration-none me-3">Aviso legal</a>
-        <a routerLink="/politica-de-privacidad" class="text-secondary text-decoration-none me-3">Privacidad</a>
-        <a routerLink="/politica-de-cookies" class="text-secondary text-decoration-none">Cookies</a>
+        <a routerLink="/aviso-legal" class="text-secondary text-decoration-none me-3">{{ 'footer.legal_notice' | translate }}</a>
+        <a routerLink="/politica-de-privacidad" class="text-secondary text-decoration-none me-3">{{ 'footer.privacy' | translate }}</a>
+        <a routerLink="/politica-de-cookies" class="text-secondary text-decoration-none">{{ 'footer.cookies' | translate }}</a>
       </div>
     </div>
 
