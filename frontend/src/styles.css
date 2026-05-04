@@ -155,48 +155,89 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
-/* ---- Before/After ---- */
+/* ---- Before/After (placeholders ilustrativos hasta tener fotos reales) ---- */
 .before-after-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  background: #fff;
 }
 
 .before-img, .after-img {
+  position: relative;
   height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2.6rem;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 14px,
+      rgba(255,255,255,0.04) 14px 15px
+    );
 }
 
 .before-img {
-  background: linear-gradient(135deg, #888 0%, #bbb 100%);
-  color: rgba(255,255,255,0.8);
+  background-color: #3a3a3a;
+  color: rgba(255,255,255,0.55);
 }
 
 .after-img {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: rgba(0,0,0,0.7);
+  background-color: var(--color-primary);
+  color: rgba(0,0,0,0.55);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 14px,
+      rgba(0,0,0,0.04) 14px 15px
+    );
+}
+
+.before-img i, .after-img i {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
 .before-label, .after-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 0.3rem 0.8rem;
   border-radius: 2rem;
 }
 
 .before-label {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.18);
+  color: #fff;
 }
 
 .after-label {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.18);
+  color: #1a1a1a;
+}
+
+.before-img::after, .after-img::after {
+  content: "Foto pendiente";
+  position: absolute;
+  bottom: 0.55rem;
+  right: 0.6rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.35rem;
+  background: rgba(0,0,0,0.45);
+  color: rgba(255,255,255,0.85);
+  border: 1px dashed rgba(255,255,255,0.3);
+}
+
+.after-img::after {
+  background: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.9);
 }
 
 /* ---- Service Cards ---- */

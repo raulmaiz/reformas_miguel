@@ -19,47 +19,68 @@
   </div>
 </section>
 
-<!-- PROYECTOS GRID -->
-<section class="py-5">
+<!-- AVISO PORTFOLIO EN PUBLICACIÓN -->
+<section class="py-5 py-lg-6">
   <div class="container">
-    <div class="row g-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="p-4 p-lg-5 bg-light rounded-4 border text-center">
+          <div class="mb-3">
+            <i class="bi bi-camera text-warning" style="font-size:2.6rem;"></i>
+          </div>
+          <h2 class="section-title mb-3" style="font-size:1.8rem;">
+            Estamos publicando los proyectos
+          </h2>
+          <p class="text-muted mb-4 mx-auto" style="max-width:560px;">
+            Tenemos un buen montón de obras hechas en Barcelona y Hospitalet, pero queremos publicarlas
+            con fotos en condiciones, no con cualquier cosa.
+            Mientras tanto, <strong>te enseñamos el portfolio por WhatsApp</strong> en el momento.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="https://wa.me/34646450767?text=Hola%20Miguel%2C%20me%20gustar%C3%ADa%20ver%20vuestro%20portfolio%20de%20reformas"
+               class="btn btn-warning btn-lg fw-bold px-4" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-2"></i>Pedir portfolio por WhatsApp
+            </a>
+            <a routerLink="/contacto" class="btn btn-outline-dark btn-lg px-4">
+              <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- LISTADO TEXTUAL DE PROYECTOS -->
+<section class="py-5 bg-light border-top">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Últimos trabajos</span>
+      <div class="divider-amber mx-auto"></div>
+      <h2 class="section-title">Algunos proyectos de los últimos meses</h2>
+      <p class="text-muted mt-2 mx-auto" style="max-width:560px;">
+        Sin fotos todavía, pero con datos reales: tipo de obra, zona, superficie y plazo de ejecución.
+      </p>
+    </div>
+
+    <div class="row g-3">
       @for (p of proyectos; track p.zona) {
         <div class="col-md-6 col-lg-4">
-          <div class="project-card bg-white border">
-            <!-- Imagen placeholder antes/después -->
-            <div class="row g-0">
-              <div class="col-6">
-                <div class="before-img" style="height:160px;font-size:2rem;">
-                  <i class="bi bi-x-circle-fill"></i>
-                  <span class="before-label" style="font-size:0.65rem;">Antes</span>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="after-img" style="height:160px;font-size:2rem;">
-                  <i class="bi bi-check-circle-fill"></i>
-                  <span class="after-label" style="font-size:0.65rem;">Después</span>
-                </div>
-              </div>
+          <div class="h-100 p-4 bg-white rounded-3 border shadow-sm d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <span class="badge bg-warning text-dark">{{ p.tipo }}</span>
+              <span class="badge bg-light text-dark border">
+                <i class="bi bi-geo-alt me-1"></i>{{ p.zona }}
+              </span>
             </div>
-            <!-- Info -->
-            <div class="p-4">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="badge bg-warning text-dark">{{ p.tipo }}</span>
-                <span class="badge bg-light text-dark border">
-                  <i class="bi bi-geo-alt me-1"></i>{{ p.zona }}
-                </span>
-              </div>
-              <p class="text-muted small mb-3">{{ p.descripcion }}</p>
-              <div class="d-flex gap-3 small text-muted border-top pt-3">
-                <span><i class="bi bi-calendar3 me-1 text-warning"></i>{{ p.dias }} días</span>
-                <span><i class="bi bi-rulers me-1 text-warning"></i>{{ p.m2 }} m²</span>
-              </div>
+            <p class="text-muted small mb-3 flex-grow-1">{{ p.descripcion }}</p>
+            <div class="d-flex gap-3 small text-muted border-top pt-3">
+              <span><i class="bi bi-calendar3 me-1 text-warning"></i>{{ p.dias }} días</span>
+              <span><i class="bi bi-rulers me-1 text-warning"></i>{{ p.m2 }} m²</span>
             </div>
           </div>
         </div>
       }
-
     </div>
   </div>
 </section>
