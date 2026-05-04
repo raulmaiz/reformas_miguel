@@ -1,22 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-politica-cookies',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   template: `
     <section class="page-hero">
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
-            <li class="breadcrumb-item active text-white">Política de cookies</li>
+            <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+            <li class="breadcrumb-item active text-white">{{ 'cookies.breadcrumb' | translate }}</li>
           </ol>
         </nav>
         <div class="col-lg-8">
-          <h1 class="display-5 fw-black text-white mb-3">Política de cookies</h1>
-          <p class="lead text-white">Qué guarda este sitio en tu navegador y por qué.</p>
+          <h1 class="display-5 fw-black text-white mb-3">{{ 'cookies.hero_title' | translate }}</h1>
+          <p class="lead text-white">{{ 'cookies.hero_subtitle' | translate }}</p>
         </div>
       </div>
     </section>
@@ -26,68 +27,45 @@ import { RouterLink } from '@angular/router';
         <div class="row justify-content-center">
           <div class="col-lg-9">
 
-            <p class="lead">
-              Este sitio web <strong>no utiliza cookies de seguimiento</strong>, ni de publicidad,
-              ni de análisis. Tampoco integra herramientas de terceros (como Google Analytics o píxeles
-              de Meta) que pudieran recoger datos sobre tu navegación.
-            </p>
+            <p class="lead" [innerHTML]="'cookies.lead' | translate"></p>
 
-            <h2 class="h4 fw-bold mt-5">1. Qué es una cookie</h2>
-            <p>
-              Una cookie es un pequeño archivo de texto que un sitio web guarda en tu navegador. Sirve
-              tanto para que el sitio funcione (cookies técnicas) como para recordar preferencias o
-              recopilar información sobre tu uso del sitio (cookies de análisis o publicidad).
-            </p>
+            <h2 class="h4 fw-bold mt-5">{{ 'cookies.h_1' | translate }}</h2>
+            <p>{{ 'cookies.p_1' | translate }}</p>
 
-            <h2 class="h4 fw-bold mt-5">2. Qué cookies usa este sitio</h2>
-            <p>
-              Actualmente este sitio web solo puede crear cookies o entradas de almacenamiento estrictamente
-              necesarias para su funcionamiento básico:
-            </p>
+            <h2 class="h4 fw-bold mt-5">{{ 'cookies.h_2' | translate }}</h2>
+            <p>{{ 'cookies.p_2_intro' | translate }}</p>
             <div class="table-responsive my-4">
               <table class="table table-bordered align-middle">
                 <thead class="table-light">
                   <tr>
-                    <th>Tipo</th>
-                    <th>Finalidad</th>
-                    <th>Duración</th>
-                    <th>Consentimiento</th>
+                    <th>{{ 'cookies.table_type' | translate }}</th>
+                    <th>{{ 'cookies.table_purpose' | translate }}</th>
+                    <th>{{ 'cookies.table_duration' | translate }}</th>
+                    <th>{{ 'cookies.table_consent' | translate }}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Técnicas / preferencias</td>
-                    <td>Recordar acciones del usuario en la sesión actual</td>
-                    <td>Sesión</td>
-                    <td>Exentas (art. 22.2 LSSI-CE)</td>
+                    <td>{{ 'cookies.table_row_type' | translate }}</td>
+                    <td>{{ 'cookies.table_row_purpose' | translate }}</td>
+                    <td>{{ 'cookies.table_row_duration' | translate }}</td>
+                    <td>{{ 'cookies.table_row_consent' | translate }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p>
-              Al no instalar cookies de análisis ni de terceros, este sitio no requiere mostrar un banner
-              de consentimiento previo. Si en el futuro se incorporan herramientas de análisis o publicidad,
-              esta política se actualizará y se solicitará tu consentimiento expreso antes de su activación.
-            </p>
+            <p>{{ 'cookies.p_2_outro' | translate }}</p>
 
-            <h2 class="h4 fw-bold mt-5">3. Cookies de servicios externos</h2>
-            <p>
-              Cuando pulsas un botón para abrir WhatsApp o realizar una llamada telefónica, sales de este
-              sitio y entras en aplicaciones de terceros (Meta, tu marcador telefónico, tu cliente de
-              correo). Esos servicios tienen sus propias políticas de cookies y privacidad, ajenas
-              al titular de este sitio.
-            </p>
+            <h2 class="h4 fw-bold mt-5">{{ 'cookies.h_3' | translate }}</h2>
+            <p>{{ 'cookies.p_3' | translate }}</p>
 
-            <h2 class="h4 fw-bold mt-5">4. Cómo controlar las cookies</h2>
-            <p>
-              Puedes configurar tu navegador para bloquear o eliminar todas las cookies de cualquier sitio.
-              Te dejamos los enlaces a las guías oficiales:
-            </p>
+            <h2 class="h4 fw-bold mt-5">{{ 'cookies.h_4' | translate }}</h2>
+            <p>{{ 'cookies.p_4' | translate }}</p>
             <ul>
-              <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
-              <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
-              <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
-              <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+              <li [innerHTML]="'cookies.li_chrome' | translate"></li>
+              <li [innerHTML]="'cookies.li_firefox' | translate"></li>
+              <li [innerHTML]="'cookies.li_safari' | translate"></li>
+              <li [innerHTML]="'cookies.li_edge' | translate"></li>
             </ul>
 
           </div>
