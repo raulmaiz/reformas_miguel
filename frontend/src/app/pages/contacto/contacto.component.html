@@ -3,19 +3,18 @@
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
-        <li class="breadcrumb-item active text-white">Contacto</li>
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+        <li class="breadcrumb-item active text-white">{{ 'contact.breadcrumb' | translate }}</li>
       </ol>
     </nav>
     <div class="col-lg-7">
-      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-chat-dots me-1"></i> Respuesta en 24h</span>
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-chat-dots me-1"></i> {{ 'contact.hero_badge' | translate }}</span>
       <h1 class="display-5 fw-black text-white mb-3">
-        Pide tu presupuesto<br>
-        <span class="text-warning">gratuito sin compromiso</span>
+        {{ 'contact.hero_title_1' | translate }}<br>
+        <span class="text-warning">{{ 'contact.hero_title_2' | translate }}</span>
       </h1>
       <p class="lead text-white">
-        Cuéntanos qué quieres reformar. Te llamamos, quedamos y te damos un precio por escrito.
-        Sin coste, sin trampa, sin letra pequeña.
+        {{ 'contact.hero_subtitle' | translate }}
       </p>
     </div>
   </div>
@@ -29,58 +28,58 @@
       <div class="col-lg-7">
         <div class="bg-white rounded-4 p-4 p-lg-5 shadow-sm border">
           <h4 class="fw-bold mb-1">
-            <i class="bi bi-pencil-square me-2 text-warning"></i>Cuéntanos tu proyecto
+            <i class="bi bi-pencil-square me-2 text-warning"></i>{{ 'contact.form_title' | translate }}
           </h4>
-          <p class="text-muted small mb-4">Respondemos en menos de 24 horas</p>
+          <p class="text-muted small mb-4">{{ 'contact.form_subtitle' | translate }}</p>
 
           <form #f="ngForm" (ngSubmit)="enviar(f)" novalidate>
             <div class="row g-3">
               <div class="col-sm-6">
-                <label class="form-label fw-semibold small">Nombre *</label>
-                <input type="text" class="form-control" placeholder="¿Cómo te llamas?"
+                <label class="form-label fw-semibold small">{{ 'contact.form_name' | translate }}</label>
+                <input type="text" class="form-control" [placeholder]="'contact.form_name_ph' | translate"
                        name="nombre" [(ngModel)]="form.nombre" required #nombre="ngModel"
                        [class.is-invalid]="nombre.invalid && nombre.touched">
               </div>
               <div class="col-sm-6">
-                <label class="form-label fw-semibold small">Apellidos</label>
-                <input type="text" class="form-control" placeholder="Apellidos (opcional)"
+                <label class="form-label fw-semibold small">{{ 'contact.form_lastname' | translate }}</label>
+                <input type="text" class="form-control" [placeholder]="'contact.form_lastname_ph' | translate"
                        name="apellidos" [(ngModel)]="form.apellidos">
               </div>
               <div class="col-sm-6">
-                <label class="form-label fw-semibold small">Teléfono *</label>
-                <input type="tel" class="form-control" placeholder="+34 600 000 000"
+                <label class="form-label fw-semibold small">{{ 'contact.form_phone' | translate }}</label>
+                <input type="tel" class="form-control" [placeholder]="'contact.form_phone_ph' | translate"
                        name="telefono" [(ngModel)]="form.telefono" required #telefono="ngModel"
                        [class.is-invalid]="telefono.invalid && telefono.touched">
               </div>
               <div class="col-sm-6">
-                <label class="form-label fw-semibold small">Email</label>
-                <input type="email" class="form-control" placeholder="tu&#64;email.com (opcional)"
+                <label class="form-label fw-semibold small">{{ 'contact.form_email' | translate }}</label>
+                <input type="email" class="form-control" [placeholder]="'contact.form_email_ph' | translate"
                        name="email" [(ngModel)]="form.email">
               </div>
               <div class="col-12">
-                <label class="form-label fw-semibold small">Zona *</label>
-                <input type="text" class="form-control" placeholder="¿En qué barrio o ciudad?"
+                <label class="form-label fw-semibold small">{{ 'contact.form_zone' | translate }}</label>
+                <input type="text" class="form-control" [placeholder]="'contact.form_zone_ph' | translate"
                        name="zona" [(ngModel)]="form.zona" required #zona="ngModel"
                        [class.is-invalid]="zona.invalid && zona.touched">
               </div>
               <div class="col-12">
-                <label class="form-label fw-semibold small">¿Qué quieres reformar? *</label>
+                <label class="form-label fw-semibold small">{{ 'contact.form_type' | translate }}</label>
                 <select class="form-select" name="tipo" [(ngModel)]="form.tipo" required
                         #tipo="ngModel" [class.is-invalid]="tipo.invalid && tipo.touched">
-                  <option value="" disabled>Selecciona el tipo de reforma</option>
-                  <option>Reforma integral del piso</option>
-                  <option>Reforma de baño</option>
-                  <option>Reforma de cocina</option>
-                  <option>Pintura y acabados</option>
-                  <option>Electricidad o fontanería</option>
-                  <option>Varios trabajos</option>
-                  <option>Otro</option>
+                  <option value="" disabled>{{ 'contact.form_type_ph' | translate }}</option>
+                  <option>{{ 'contact.form_type_integral' | translate }}</option>
+                  <option>{{ 'contact.form_type_bano' | translate }}</option>
+                  <option>{{ 'contact.form_type_cocina' | translate }}</option>
+                  <option>{{ 'contact.form_type_pintura' | translate }}</option>
+                  <option>{{ 'contact.form_type_electric' | translate }}</option>
+                  <option>{{ 'contact.form_type_misc' | translate }}</option>
+                  <option>{{ 'contact.form_type_other' | translate }}</option>
                 </select>
               </div>
               <div class="col-12">
-                <label class="form-label fw-semibold small">Cuéntanos más (opcional)</label>
+                <label class="form-label fw-semibold small">{{ 'contact.form_details' | translate }}</label>
                 <textarea class="form-control" rows="3"
-                          placeholder="Estado actual, superficie aproximada, materiales en mente..."
+                          [placeholder]="'contact.form_details_ph' | translate"
                           name="detalles" [(ngModel)]="form.detalles"></textarea>
               </div>
               <div class="col-12">
@@ -89,18 +88,17 @@
                          name="rgpd" [(ngModel)]="form.rgpd" required #rgpd="ngModel"
                          [class.is-invalid]="rgpd.invalid && rgpd.touched">
                   <label class="form-check-label text-muted" for="rgpd-check">
-                    He leído y acepto la
-                    <a routerLink="/politica-de-privacidad" class="text-decoration-underline">política de privacidad</a>.
-                    Mis datos no se almacenan en este sitio: al pulsar el botón se abre WhatsApp con el mensaje preparado para que yo lo envíe.
+                    {{ 'contact.form_rgpd_l1' | translate }}
+                    <a routerLink="/politica-de-privacidad" class="text-decoration-underline">{{ 'contact.form_rgpd_link' | translate }}</a>{{ 'contact.form_rgpd_l2' | translate }}
                   </label>
                 </div>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold">
-                  <i class="bi bi-whatsapp me-2"></i>Enviar por WhatsApp
+                  <i class="bi bi-whatsapp me-2"></i>{{ 'contact.form_submit' | translate }}
                 </button>
                 <p class="text-muted text-center small mt-2 mb-0">
-                  Al enviar abrimos WhatsApp con tus datos ya rellenados.
+                  {{ 'contact.form_help' | translate }}
                 </p>
               </div>
             </div>
@@ -110,14 +108,14 @@
 
       <!-- INFO CONTACTO -->
       <div class="col-lg-5">
-        <h4 class="fw-bold mb-4">Otras formas de contactar</h4>
+        <h4 class="fw-bold mb-4">{{ 'contact.info_title' | translate }}</h4>
 
         <div class="contact-info-item">
           <div class="contact-icon"><i class="bi bi-telephone"></i></div>
           <div>
-            <div class="fw-bold">Teléfono</div>
+            <div class="fw-bold">{{ 'contact.info_phone_label' | translate }}</div>
             <a href="tel:+34646450767" class="text-dark text-decoration-none fs-5 fw-semibold">+34 646 450 767</a>
-            <div class="text-muted small">Lun–Vie 8:00–19:00 · Sáb 9:00–14:00</div>
+            <div class="text-muted small">{{ 'contact.info_phone_hours' | translate }}</div>
           </div>
         </div>
 
@@ -126,33 +124,33 @@
             <i class="bi bi-whatsapp"></i>
           </div>
           <div>
-            <div class="fw-bold">WhatsApp</div>
+            <div class="fw-bold">{{ 'contact.info_wa_label' | translate }}</div>
             <a href="https://wa.me/34646450767" class="text-decoration-none fw-semibold" style="color:#16a34a;"
                target="_blank" rel="noopener">
-              Escribir ahora
+              {{ 'contact.info_wa_action' | translate }}
             </a>
-            <div class="text-muted small">Respuesta en menos de 2 horas</div>
+            <div class="text-muted small">{{ 'contact.info_wa_hint' | translate }}</div>
           </div>
         </div>
 
         <div class="contact-info-item">
           <div class="contact-icon"><i class="bi bi-envelope"></i></div>
           <div>
-            <div class="fw-bold">Email</div>
+            <div class="fw-bold">{{ 'contact.info_email_label' | translate }}</div>
             <a href="mailto:info@reformasmiguel.cat" class="text-dark text-decoration-none">
               info&#64;reformasmiguel.cat
             </a>
-            <div class="text-muted small">Para presupuestos y consultas</div>
+            <div class="text-muted small">{{ 'contact.info_email_hint' | translate }}</div>
           </div>
         </div>
 
         <div class="contact-info-item">
           <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
           <div>
-            <div class="fw-bold">Zona de trabajo</div>
-            <div>Barcelona y área metropolitana</div>
+            <div class="fw-bold">{{ 'contact.info_area_label' | translate }}</div>
+            <div>{{ 'contact.info_area_value' | translate }}</div>
             <a routerLink="/zonas-de-trabajo" class="text-warning text-decoration-none small fw-semibold">
-              Ver todas las zonas →
+              {{ 'contact.info_area_link' | translate }}
             </a>
           </div>
         </div>
@@ -160,28 +158,28 @@
         <!-- Datos de confianza -->
         <div class="mt-4 p-4 bg-warning bg-opacity-10 rounded-3 border border-warning border-opacity-25">
           <h6 class="fw-bold mb-3">
-            <i class="bi bi-shield-check me-2 text-warning"></i>Por qué contactarnos
+            <i class="bi bi-shield-check me-2 text-warning"></i>{{ 'contact.info_trust_title' | translate }}
           </h6>
           <div class="d-flex flex-column gap-2">
             <div class="d-flex align-items-center gap-2 small">
               <i class="bi bi-check-circle-fill text-success"></i>
-              Visita y presupuesto gratuito
+              {{ 'contact.info_trust_1' | translate }}
             </div>
             <div class="d-flex align-items-center gap-2 small">
               <i class="bi bi-check-circle-fill text-success"></i>
-              Precio cerrado por escrito
+              {{ 'contact.info_trust_2' | translate }}
             </div>
             <div class="d-flex align-items-center gap-2 small">
               <i class="bi bi-check-circle-fill text-success"></i>
-              Plazos garantizados
+              {{ 'contact.info_trust_3' | translate }}
             </div>
             <div class="d-flex align-items-center gap-2 small">
               <i class="bi bi-check-circle-fill text-success"></i>
-              +15 años de experiencia
+              {{ 'contact.info_trust_4' | translate }}
             </div>
             <div class="d-flex align-items-center gap-2 small">
               <i class="bi bi-check-circle-fill text-success"></i>
-              Equipo propio, sin subcontratas
+              {{ 'contact.info_trust_5' | translate }}
             </div>
           </div>
         </div>
