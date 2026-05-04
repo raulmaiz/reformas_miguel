@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { SchemaService } from '../../services/schema.service';
 
 const SCHEMA_ID = 'page-schema-service';
@@ -7,7 +8,7 @@ const SCHEMA_ID = 'page-schema-service';
 @Component({
   selector: 'app-electricidad-fontaneria',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './electricidad-fontaneria.component.html'
 })
 export class ElectricidadFontaneriaComponent implements OnInit, OnDestroy {

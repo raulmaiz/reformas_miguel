@@ -3,22 +3,22 @@
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
-        <li class="breadcrumb-item active text-white">Reforma de cocina</li>
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+        <li class="breadcrumb-item active text-white">{{ 'cocina.breadcrumb' | translate }}</li>
       </ol>
     </nav>
     <div class="col-lg-8">
-      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-egg-fried me-1"></i> Transforma tu cocina</span>
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-egg-fried me-1"></i> {{ 'cocina.hero_badge' | translate }}</span>
       <h1 class="display-5 fw-black text-white mb-3">
-        Reforma de cocina en Barcelona<br>
-        <span class="text-warning">— sin el caos de una obra</span>
+        {{ 'cocina.hero_title_1' | translate }}<br>
+        <span class="text-warning">{{ 'cocina.hero_title_2' | translate }}</span>
       </h1>
       <p class="lead text-secondary mb-4">
-        La cocina que siempre quisiste. Bien planificada, bien ejecutada y al precio acordado.
+        {{ 'cocina.hero_subtitle' | translate }}
       </p>
       <div class="d-flex gap-3 flex-wrap">
         <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
-          <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+          <i class="bi bi-chat-dots me-2"></i>{{ 'svc.request_quote_free' | translate }}
         </a>
         <a href="tel:+34646450767" class="btn btn-outline-light btn-lg px-4">
           <i class="bi bi-telephone me-2"></i>+34 646 450 767
@@ -33,36 +33,30 @@
   <div class="container">
     <div class="row g-5 align-items-center">
       <div class="col-lg-6">
-        <span class="section-label">La cocina que mereces</span>
+        <span class="section-label">{{ 'cocina.intro_label' | translate }}</span>
         <div class="divider-amber-left divider-amber mt-2 mb-3"></div>
-        <h2 class="section-title mb-3">Una cocina renovada cambia el piso entero</h2>
-        <p class="text-muted mb-3">
-          La cocina es el corazón del hogar. Una cocina antigua, con muebles desvencijados o mal distribuida
-          arruina el uso diario y baja el valor del piso.
-        </p>
-        <p class="text-muted mb-3">
-          Con Miguel coordinamos muebles, electricidad, fontanería y revestimientos en un único proyecto.
-          Tú eliges el estilo y nosotros nos ocupamos del resto.
-        </p>
+        <h2 class="section-title mb-3">{{ 'cocina.intro_title' | translate }}</h2>
+        <p class="text-muted mb-3">{{ 'cocina.intro_p1' | translate }}</p>
+        <p class="text-muted mb-3">{{ 'cocina.intro_p2' | translate }}</p>
         <div class="row g-3 mt-2">
           <div class="col-6">
             <div class="d-flex align-items-center gap-2 text-success fw-semibold small">
-              <i class="bi bi-check-circle-fill"></i>Diseño incluido
+              <i class="bi bi-check-circle-fill"></i>{{ 'cocina.check_design' | translate }}
             </div>
           </div>
           <div class="col-6">
             <div class="d-flex align-items-center gap-2 text-success fw-semibold small">
-              <i class="bi bi-check-circle-fill"></i>Electrodomésticos opcionales
+              <i class="bi bi-check-circle-fill"></i>{{ 'cocina.check_appliances' | translate }}
             </div>
           </div>
           <div class="col-6">
             <div class="d-flex align-items-center gap-2 text-success fw-semibold small">
-              <i class="bi bi-check-circle-fill"></i>Instalación completa
+              <i class="bi bi-check-circle-fill"></i>{{ 'cocina.check_install' | translate }}
             </div>
           </div>
           <div class="col-6">
             <div class="d-flex align-items-center gap-2 text-success fw-semibold small">
-              <i class="bi bi-check-circle-fill"></i>Plazo garantizado
+              <i class="bi bi-check-circle-fill"></i>{{ 'cocina.check_deadline' | translate }}
             </div>
           </div>
         </div>
@@ -73,15 +67,15 @@
             <div class="col-6">
               <div class="before-img" style="height:280px;">
                 <i class="bi bi-egg fs-1"></i>
-                <span class="before-label">Antes</span>
-                <small class="mt-2 opacity-75">Muebles viejos,<br>mala distribución</small>
+                <span class="before-label">{{ 'home.ba_before' | translate }}</span>
+                <small class="mt-2 opacity-75">{{ 'cocina.ba_before_caption_l1' | translate }}<br>{{ 'cocina.ba_before_caption_l2' | translate }}</small>
               </div>
             </div>
             <div class="col-6">
               <div class="after-img" style="height:280px;">
                 <i class="bi bi-egg-fried fs-1"></i>
-                <span class="after-label">Después</span>
-                <small class="mt-2 opacity-75">Cocina abierta,<br>isla central</small>
+                <span class="after-label">{{ 'home.ba_after' | translate }}</span>
+                <small class="mt-2 opacity-75">{{ 'cocina.ba_after_caption_l1' | translate }}<br>{{ 'cocina.ba_after_caption_l2' | translate }}</small>
               </div>
             </div>
           </div>
@@ -95,17 +89,17 @@
 <section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Qué incluye</span>
+      <span class="section-label">{{ 'svc.what_includes_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">Todo lo que necesita tu nueva cocina</h2>
+      <h2 class="section-title">{{ 'cocina.includes_title' | translate }}</h2>
     </div>
     <div class="row g-3">
       <div class="col-sm-6 col-lg-4">
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-bricks text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Derribo y preparación</h6>
-            <p class="text-muted small mb-0">Retiro de la cocina antigua y adecuación del espacio</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_1_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_1_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -113,8 +107,8 @@
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-grid text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Alicatado y pavimento</h6>
-            <p class="text-muted small mb-0">Azulejos de pared y suelo nuevo con los materiales que elijas</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_2_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_2_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -122,8 +116,8 @@
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-box-seam text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Muebles de cocina</h6>
-            <p class="text-muted small mb-0">Suministro e instalación de muebles bajos y altos</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_3_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_3_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -131,8 +125,8 @@
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-layers text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Encimera</h6>
-            <p class="text-muted small mb-0">Silestone, granito, laminado o cerámica según presupuesto</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_4_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_4_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -140,8 +134,8 @@
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-lightning text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Electricidad y fontanería</h6>
-            <p class="text-muted small mb-0">Tomas de corriente, fregadero y conexiones de electrodomésticos</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_5_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_5_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -149,8 +143,8 @@
         <div class="d-flex gap-3 p-4 bg-white rounded-3 shadow-sm h-100">
           <i class="bi bi-fan text-warning fs-3 flex-shrink-0"></i>
           <div>
-            <h6 class="fw-bold mb-1">Campana extractora</h6>
-            <p class="text-muted small mb-0">Instalación y conexión de la extracción de humos</p>
+            <h6 class="fw-bold mb-1">{{ 'cocina.includes_6_title' | translate }}</h6>
+            <p class="text-muted small mb-0">{{ 'cocina.includes_6_desc' | translate }}</p>
           </div>
         </div>
       </div>
@@ -162,49 +156,49 @@
 <section class="py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Precios orientativos</span>
+      <span class="section-label">{{ 'svc.indicative_prices_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">¿Cuánto cuesta reformar una cocina en Barcelona?</h2>
+      <h2 class="section-title">{{ 'cocina.prices_title' | translate }}</h2>
     </div>
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4">
-          <h6 class="fw-bold">Reforma básica</h6>
+          <h6 class="fw-bold">{{ 'svc.price_basic' | translate }}</h6>
           <div class="display-6 fw-black text-warning my-2">3.500–6.000€</div>
-          <p class="text-muted small">Muebles económicos, sin electrodomésticos</p>
+          <p class="text-muted small">{{ 'cocina.price_basic_desc' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4" style="border:2px solid var(--color-primary)!important">
-          <div class="badge bg-warning text-dark mb-3">Más habitual</div>
-          <h6 class="fw-bold">Reforma completa</h6>
+          <div class="badge bg-warning text-dark mb-3">{{ 'svc.price_most_common' | translate }}</div>
+          <h6 class="fw-bold">{{ 'svc.price_complete' | translate }}</h6>
           <div class="display-6 fw-black text-warning my-2">6.000–12.000€</div>
-          <p class="text-muted small">Muebles + encimera + alicatado + instalaciones</p>
+          <p class="text-muted small">{{ 'cocina.price_complete_desc' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4">
-          <h6 class="fw-bold">Cocina de diseño</h6>
+          <h6 class="fw-bold">{{ 'cocina.price_premium_label' | translate }}</h6>
           <div class="display-6 fw-black text-warning my-2">12.000–20.000€</div>
-          <p class="text-muted small">Materiales premium, isla central, encimera silestone</p>
+          <p class="text-muted small">{{ 'cocina.price_premium_desc' | translate }}</p>
         </div>
       </div>
     </div>
-    <p class="text-center text-muted small mt-4">* Sin IVA. No incluyen electrodomésticos salvo acuerdo previo.</p>
+    <p class="text-center text-muted small mt-4">{{ 'cocina.price_note' | translate }}</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section py-5">
   <div class="container text-center">
-    <h2 class="section-title section-title-white mb-3">¿Renovamos tu cocina?</h2>
-    <p class="text-secondary mb-4">Visita gratuita en Barcelona. Presupuesto cerrado en 24h.</p>
+    <h2 class="section-title section-title-white mb-3">{{ 'cocina.cta_title' | translate }}</h2>
+    <p class="text-secondary mb-4">{{ 'cocina.cta_intro' | translate }}</p>
     <div class="d-flex gap-3 justify-content-center flex-wrap">
       <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
-        <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+        <i class="bi bi-chat-dots me-2"></i>{{ 'svc.request_quote_free' | translate }}
       </a>
       <a href="https://wa.me/34646450767" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
-        <i class="bi bi-whatsapp me-2"></i>WhatsApp
+        <i class="bi bi-whatsapp me-2"></i>{{ 'svc.wa' | translate }}
       </a>
     </div>
   </div>

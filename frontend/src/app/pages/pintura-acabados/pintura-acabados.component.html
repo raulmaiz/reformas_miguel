@@ -3,22 +3,22 @@
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">Inicio</a></li>
-        <li class="breadcrumb-item active text-white">Pintura y acabados</li>
+        <li class="breadcrumb-item"><a routerLink="/" class="text-warning text-decoration-none">{{ 'svc.breadcrumb_home' | translate }}</a></li>
+        <li class="breadcrumb-item active text-white">{{ 'pintura.breadcrumb' | translate }}</li>
       </ol>
     </nav>
     <div class="col-lg-8">
-      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-brush me-1"></i> Acabado profesional</span>
+      <span class="hero-badge mb-3 d-inline-block"><i class="bi bi-brush me-1"></i> {{ 'pintura.hero_badge' | translate }}</span>
       <h1 class="display-5 fw-black text-white mb-3">
-        Pintura y acabados en Barcelona<br>
-        <span class="text-warning">— paredes perfectas a primera pasada</span>
+        {{ 'pintura.hero_title_1' | translate }}<br>
+        <span class="text-warning">{{ 'pintura.hero_title_2' | translate }}</span>
       </h1>
       <p class="lead text-secondary mb-4">
-        La diferencia entre pintar bien y pintar de cualquier manera la notas a los 6 meses. Con Miguel, bien hecho desde el principio.
+        {{ 'pintura.hero_subtitle' | translate }}
       </p>
       <div class="d-flex gap-3 flex-wrap">
         <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
-          <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+          <i class="bi bi-chat-dots me-2"></i>{{ 'svc.request_quote_free' | translate }}
         </a>
         <a href="tel:+34646450767" class="btn btn-outline-light btn-lg px-4">
           <i class="bi bi-telephone me-2"></i>+34 646 450 767
@@ -33,24 +33,18 @@
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-7">
-        <span class="section-label">Por qué importa la preparación</span>
+        <span class="section-label">{{ 'pintura.prep_label' | translate }}</span>
         <div class="divider-amber-left divider-amber mt-2 mb-3"></div>
-        <h2 class="section-title mb-3">Pintar bien empieza antes de abrir el bote</h2>
-        <p class="text-muted mb-3">
-          El 90% de los problemas con la pintura (desconchamientos, manchas, irregularidades) vienen de una mala preparación.
-          Una pared sin imprimar, sin lijar o con humedad no aguanta ninguna pintura.
-        </p>
-        <p class="text-muted mb-4">
-          El equipo de Miguel prepara la superficie antes de aplicar una sola capa. Masillado, lijado, imprimación
-          y acabado en las capas necesarias. Sin atajos.
-        </p>
+        <h2 class="section-title mb-3">{{ 'pintura.prep_title' | translate }}</h2>
+        <p class="text-muted mb-3">{{ 'pintura.prep_p1' | translate }}</p>
+        <p class="text-muted mb-4">{{ 'pintura.prep_p2' | translate }}</p>
         <div class="row g-3">
           <div class="col-sm-6">
             <div class="d-flex gap-3 p-3 bg-light rounded-3">
               <i class="bi bi-check-circle-fill text-warning fs-4 flex-shrink-0"></i>
               <div>
-                <div class="fw-bold small">Pintura interior</div>
-                <div class="text-muted small">Habitaciones, salones, pasillos</div>
+                <div class="fw-bold small">{{ 'pintura.prep_type1_title' | translate }}</div>
+                <div class="text-muted small">{{ 'pintura.prep_type1_desc' | translate }}</div>
               </div>
             </div>
           </div>
@@ -58,8 +52,8 @@
             <div class="d-flex gap-3 p-3 bg-light rounded-3">
               <i class="bi bi-check-circle-fill text-warning fs-4 flex-shrink-0"></i>
               <div>
-                <div class="fw-bold small">Pintura exterior</div>
-                <div class="text-muted small">Fachadas, terrazas, garajes</div>
+                <div class="fw-bold small">{{ 'pintura.prep_type2_title' | translate }}</div>
+                <div class="text-muted small">{{ 'pintura.prep_type2_desc' | translate }}</div>
               </div>
             </div>
           </div>
@@ -67,8 +61,8 @@
             <div class="d-flex gap-3 p-3 bg-light rounded-3">
               <i class="bi bi-check-circle-fill text-warning fs-4 flex-shrink-0"></i>
               <div>
-                <div class="fw-bold small">Reparación de paredes</div>
-                <div class="text-muted small">Grietas, humedades, desconchados</div>
+                <div class="fw-bold small">{{ 'pintura.prep_type3_title' | translate }}</div>
+                <div class="text-muted small">{{ 'pintura.prep_type3_desc' | translate }}</div>
               </div>
             </div>
           </div>
@@ -76,8 +70,8 @@
             <div class="d-flex gap-3 p-3 bg-light rounded-3">
               <i class="bi bi-check-circle-fill text-warning fs-4 flex-shrink-0"></i>
               <div>
-                <div class="fw-bold small">Acabados especiales</div>
-                <div class="text-muted small">Microcemento, estuco, chalk paint</div>
+                <div class="fw-bold small">{{ 'pintura.prep_type4_title' | translate }}</div>
+                <div class="text-muted small">{{ 'pintura.prep_type4_desc' | translate }}</div>
               </div>
             </div>
           </div>
@@ -85,27 +79,27 @@
       </div>
       <div class="col-lg-5">
         <div class="bg-light p-4 rounded-4 shadow-sm">
-          <h5 class="fw-bold mb-4"><i class="bi bi-list-check me-2 text-warning"></i>Proceso de trabajo</h5>
+          <h5 class="fw-bold mb-4"><i class="bi bi-list-check me-2 text-warning"></i>{{ 'pintura.process_title' | translate }}</h5>
           <div class="d-flex flex-column gap-3">
             <div class="process-step">
               <div class="step-number">1</div>
-              <div><strong>Protección</strong> — cubrimos muebles, suelos y enchufes</div>
+              <div [innerHTML]="'pintura.process_step1' | translate"></div>
             </div>
             <div class="process-step">
               <div class="step-number">2</div>
-              <div><strong>Reparación</strong> — masillamos grietas y agujeros</div>
+              <div [innerHTML]="'pintura.process_step2' | translate"></div>
             </div>
             <div class="process-step">
               <div class="step-number">3</div>
-              <div><strong>Lijado e imprimación</strong> — base perfecta para la pintura</div>
+              <div [innerHTML]="'pintura.process_step3' | translate"></div>
             </div>
             <div class="process-step">
               <div class="step-number">4</div>
-              <div><strong>Acabado final</strong> — las capas necesarias, sin prisas</div>
+              <div [innerHTML]="'pintura.process_step4' | translate"></div>
             </div>
             <div class="process-step">
               <div class="step-number">5</div>
-              <div><strong>Limpieza total</strong> — dejamos tu casa como la encontramos</div>
+              <div [innerHTML]="'pintura.process_step5' | translate"></div>
             </div>
           </div>
         </div>
@@ -118,49 +112,49 @@
 <section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="section-label">Precios orientativos</span>
+      <span class="section-label">{{ 'svc.indicative_prices_label' | translate }}</span>
       <div class="divider-amber mx-auto"></div>
-      <h2 class="section-title">¿Cuánto cuesta pintar un piso en Barcelona?</h2>
+      <h2 class="section-title">{{ 'pintura.prices_title' | translate }}</h2>
     </div>
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4">
-          <h6 class="fw-bold">Piso de 50–70 m²</h6>
+          <h6 class="fw-bold">{{ 'pintura.price_size1_label' | translate }}</h6>
           <div class="display-6 fw-black text-warning my-2">800–1.400€</div>
-          <p class="text-muted small">Paredes y techos, 2 manos. Con preparación básica.</p>
+          <p class="text-muted small">{{ 'pintura.price_size1_desc' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4" style="border:2px solid var(--color-primary)!important">
-          <div class="badge bg-warning text-dark mb-3">Más habitual</div>
-          <h6 class="fw-bold">Piso de 70–100 m²</h6>
+          <div class="badge bg-warning text-dark mb-3">{{ 'svc.price_most_common' | translate }}</div>
+          <h6 class="fw-bold">{{ 'pintura.price_size2_label' | translate }}</h6>
           <div class="display-6 fw-black text-warning my-2">1.400–2.200€</div>
-          <p class="text-muted small">Con reparación de paredes y acabado completo.</p>
+          <p class="text-muted small">{{ 'pintura.price_size2_desc' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card shadow-sm text-center p-4">
-          <h6 class="fw-bold">Piso +100 m²</h6>
-          <div class="display-6 fw-black text-warning my-2">Desde 2.200€</div>
-          <p class="text-muted small">Consultar según estado de las paredes.</p>
+          <h6 class="fw-bold">{{ 'pintura.price_size3_label' | translate }}</h6>
+          <div class="display-6 fw-black text-warning my-2">{{ 'pintura.price_size3_value' | translate }}</div>
+          <p class="text-muted small">{{ 'pintura.price_size3_desc' | translate }}</p>
         </div>
       </div>
     </div>
-    <p class="text-center text-muted small mt-4">* Precios sin IVA. Incluyen materiales estándar.</p>
+    <p class="text-center text-muted small mt-4">{{ 'pintura.price_note' | translate }}</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section py-5">
   <div class="container text-center">
-    <h2 class="section-title section-title-white mb-3">¿Tus paredes necesitan vida nueva?</h2>
-    <p class="text-secondary mb-4">Presupuesto gratuito en 24h. Sin compromiso.</p>
+    <h2 class="section-title section-title-white mb-3">{{ 'pintura.cta_title' | translate }}</h2>
+    <p class="text-secondary mb-4">{{ 'pintura.cta_intro' | translate }}</p>
     <div class="d-flex gap-3 justify-content-center flex-wrap">
       <a routerLink="/contacto" class="btn btn-warning btn-lg fw-bold px-5">
-        <i class="bi bi-chat-dots me-2"></i>Pedir presupuesto gratis
+        <i class="bi bi-chat-dots me-2"></i>{{ 'svc.request_quote_free' | translate }}
       </a>
       <a href="https://wa.me/34646450767" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener">
-        <i class="bi bi-whatsapp me-2"></i>WhatsApp
+        <i class="bi bi-whatsapp me-2"></i>{{ 'svc.wa' | translate }}
       </a>
     </div>
   </div>
